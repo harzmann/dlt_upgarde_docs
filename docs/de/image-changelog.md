@@ -2,6 +2,13 @@
 
 Diese Historie umfasst frühere Migrationsimages und das bereinigte Profil für DLTNG Upgrade. Historische Angaben beziehen sich auf das jeweilige Image. Das Windows-Tool hat ein [eigenes Changelog](changelog.md).
 
+## Pilotbereitstellung – 2026-09-16
+
+- Das bereinigte Image vom 15. September wird unverändert über UPS für ein ausdrücklich registriertes CM4-Testgerät bereitgestellt.
+- Signiertes Manifest mit Ablaufdatum und separater Upgrade-Testausgabe 0.2.1. Die Freigabe ist an Testgerät, 32-GB-Hardwareprofil und Ausgangsversion gebunden.
+- Unterstützte Ausgangsversionen dieses Piloten: 9.5, 10.0.0-rc.3 und 10.0.0-rc.4. Ein direkter Übergang aus Anwendung 1.0 ist noch nicht geprüft.
+- Keine allgemeine Hardware- oder Kundenfreigabe. Ablauf und offene Prüfungen stehen unter [Pilottest](pilot.md).
+
 ## 10.0.0-rc.4-startup.1-clean-update – 2026-09-15
 
 - Eigenes bereinigtes Profil für Neuinstallation mit anschließender Datenübernahme. Referenzkonfiguration, Logos, Berichte, Nutzdateien und SQL-Dumps werden ausgeschlossen.

@@ -2,6 +2,13 @@
 
 This history includes earlier migration images as well as the clean profile used by DLTNG Upgrade. Statements in historical entries refer to the respective image. The Windows application has its [own changelog](changelog.md).
 
+## Pilot delivery – 2026-09-16
+
+- The clean image from 15 September is delivered unchanged through UPS for an explicitly registered CM4 test device.
+- Signed manifest with an expiry date and a separate Upgrade 0.2.1 test build. Approval is bound to the test device, 32 GB hardware profile and source version.
+- Source versions accepted by this pilot: 9.5, 10.0.0-rc.3 and 10.0.0-rc.4. Direct migration from application 1.0 has not been verified.
+- No general hardware or customer approval. See [Pilot test](pilot.md) for the procedure and outstanding checks.
+
 ## 10.0.0-rc.4-startup.1-clean-update – 2026-09-15
 
 - Separate clean profile for reinstallation followed by customer-data restoration. Reference settings, logos, reports, data files and SQL dumps are excluded.
