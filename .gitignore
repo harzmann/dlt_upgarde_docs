@@ -1,0 +1,8 @@
+.venv/
+site/
+__pycache__/
+*.pyc
+docs/de/assets/
+docs/en/assets/
+build/
+*.log

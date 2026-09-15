@@ -1,0 +1,14 @@
+INHERIT: mkdocs.base.yml
+site_url: https://harzmann.github.io/dlt_upgarde_docs/de/
+docs_dir: docs/de
+site_dir: site/de
+theme:
+  language: de
+nav:
+  - Übersicht: index.md
+  - Anleitung: guide.md
+  - Download: download.md
+  - Fehlerhilfe: troubleshooting.md
+  - Änderungen:
+      - Upgrade-Tool: changelog.md
+      - DLTNG-Image: image-changelog.md

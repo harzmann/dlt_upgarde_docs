@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "filename": "DLTNG-Upgrade.exe",
+  "size_bytes": 79324160,
+  "sha256": "be7bbf670f2723e5682d27678a3314504f840b5b2d7698c18bd3be70951a0c8a",
+  "download_url": "https://github.com/harzmann/dlt_upgarde_docs/releases/download/v0.2.0/DLTNG-Upgrade.exe",
+  "release_url": "https://github.com/harzmann/dlt_upgarde_docs/releases/tag/v0.2.0",
+  "source_repository": "https://github.com/harzmann/dlt_upgrade",
+  "source_commit": "6333466bb56c21bddb1cb8be4f66492a7696fd7f",
+  "development_edition": true,
+  "code_signed": false,
+  "hardware_approved": false
+}
