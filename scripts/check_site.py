@@ -26,7 +26,7 @@ class Links(HTMLParser):
 
 errors = []
 for code in ('de', 'en'):
-    for page in ('', 'guide', 'download', 'troubleshooting', 'changelog', 'image-changelog'):
+    for page in ('', 'guide', 'pilot', 'download', 'troubleshooting', 'changelog', 'image-changelog'):
         path = SITE / code / page / 'index.html'
         if not path.is_file():
             errors.append(str(path))
@@ -51,4 +51,4 @@ for code in ('de', 'en'):
                 errors.append(f'Broken local link: {path.relative_to(SITE)} -> {link}')
 if errors:
     raise SystemExit('\n'.join(errors))
-print('Verified 12 DE/EN pages, HTML language, local links and download metadata.')
+print('Verified 14 DE/EN pages, HTML language, local links and download metadata.')

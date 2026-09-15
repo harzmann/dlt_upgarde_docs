@@ -1,4 +1,11 @@
-# Programm-Changelog
+# Änderungen am Upgrade-Tool
+
+### 0.2.1 – 2026-09-16 · Pilotvorbereitung
+
+- Signierte Pilotimages über UPS; an explizite CM4-Seriennummern und ein Ablaufdatum gebunden.
+- Laborhinweis in der UI und Geräteabgleich vor der Installation des Sicherungshelfers.
+- Nur lesende Prüfung von Seriennummer und Ausgangsversion; Version 1.0 wird vor Änderungen mit einer konkreten Handlungsempfehlung angehalten.
+- Zusätzliche Tests für Gerätebegrenzung, Ablauf und den Downloadpfad. Direkte Migration aus 1.0 und Hardwareabnahme bleiben offen.
 
 ### 0.2.0 – 2026-09-15
 

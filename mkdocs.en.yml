@@ -7,6 +7,7 @@ theme:
 nav:
   - Overview: index.md
   - User guide: guide.md
+  - Pilot test: pilot.md
   - Download: download.md
   - Troubleshooting: troubleshooting.md
   - Changes:

@@ -1,4 +1,11 @@
-# Application changelog
+# Upgrade tool changelog
+
+### 0.2.1 – 2026-09-16 · Pilot preparation
+
+- Signed pilot images delivered through UPS, bound to explicit CM4 serials and an expiry date.
+- Lab notice in the UI and device identity checks before installing the backup helper.
+- Read-only inspection of serial and source version; version 1.0 stops before changes with an actionable explanation.
+- Additional scope, expiry and download-path tests. Direct migration from 1.0 and hardware acceptance remain pending.
 
 ### 0.2.0 – 2026-09-15
 
