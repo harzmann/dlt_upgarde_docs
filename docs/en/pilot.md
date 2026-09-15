@@ -15,7 +15,7 @@ A separately configured test build, version 0.2.1 or later, can retrieve a signe
 
 **Direct upgrading from DLTNG 1.0 has not been verified.** The application stops with `SRC-001` before installing a backup helper. The original image first needs assessment of its data layout, Python version and database migration.
 
-The existing application update from 1.0 to 9.5 can serve as a preparatory route. Start the image-upgrade test only after checking that version 9.5 is actually installed. Approving a version number alone does not replace migration assessment.
+The existing application update from 1.0 to 9.5 can be tested as a preparatory route. Its UPS download entitlement has been checked; actual installation and migration on the device remain pending. Start the image-upgrade test only after checking that version 9.5 is actually installed. Approving a version number alone does not replace migration assessment.
 
 ## Run the test
 

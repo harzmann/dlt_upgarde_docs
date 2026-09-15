@@ -15,7 +15,7 @@ Eine gesonderte Testausgabe ab Version 0.2.1 kann ein signiertes Laborimage übe
 
 **Ein direktes Upgrade aus DLTNG 1.0 ist noch nicht geprüft.** Die App hält diese Version vor Installation eines Sicherungshelfers mit `SRC-001` an. Das Originalimage muss zunächst auf Datenstruktur, Python-Version und Datenbankmigration geprüft werden.
 
-Als vorbereitender Weg kann das vorhandene Softwareupdate von 1.0 auf 9.5 verwendet werden. Erst nach Kontrolle der tatsächlich installierten Version 9.5 beginnt der Image-Upgrade-Test. Die Freigabe einer Versionsnummer allein ersetzt keine Migrationsprüfung.
+Als vorbereitender Weg kann das vorhandene Softwareupdate von 1.0 auf 9.5 getestet werden. Bisher ist dessen UPS-Downloadberechtigung geprüft; die tatsächliche Installation und Migration am Gerät stehen noch aus. Erst nach Kontrolle der tatsächlich installierten Version 9.5 beginnt der Image-Upgrade-Test. Die Freigabe einer Versionsnummer allein ersetzt keine Migrationsprüfung.
 
 ## Test durchführen
 
