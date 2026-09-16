@@ -2,6 +2,10 @@
 
 This history includes earlier migration images as well as the clean profile used by DLTNG Upgrade. Statements in historical entries refer to the respective image. The Windows application has its [own changelog](changelog.md).
 
+## Upgrade helper 0.2.3 – 2026-09-16
+
+Legacy NFC build and uWSGI logs are archived and restored. Existing image files and UPS approvals remain unchanged. The app installs the revised helper after device/session verification.
+
 ## Pilot delivery – 2026-09-16
 
 - Additional signed approval for the assessed original image with application version `1`/`1.0`, requiring the separate 0.2.2 test build. Image bytes are unchanged; the app supplies the updated backup/migration helper after session verification.

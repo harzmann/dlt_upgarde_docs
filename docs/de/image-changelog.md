@@ -2,6 +2,10 @@
 
 Diese Historie umfasst frühere Migrationsimages und das bereinigte Profil für DLTNG Upgrade. Historische Angaben beziehen sich auf das jeweilige Image. Das Windows-Tool hat ein [eigenes Changelog](changelog.md).
 
+## Upgrade-Helfer 0.2.3 – 2026-09-16
+
+Ältere NFC-Build- und uWSGI-Protokolle werden als Archiv gesichert und wiederhergestellt. Vorhandene Image-Dateien und UPS-Freigaben bleiben unverändert. Die App stellt den neuen Helfer nach Geräte-/Sitzungsprüfung bereit.
+
 ## Pilotbereitstellung – 2026-09-16
 
 - Ergänzende signierte Freigabe für das geprüfte Originalimage mit Anwendungskennung `1`/`1.0`; benötigt die separate Testausgabe 0.2.2. Image-Datei unverändert, aktualisierter Sicherungs-/Migrationshelfer wird sitzungsgeprüft durch die App bereitgestellt.

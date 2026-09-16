@@ -2,6 +2,15 @@
 
 A separately configured test build, version 0.2.1 or later, can retrieve a signed lab image through UPS. Approval applies exclusively to registered CM4 serials until the specified expiry. General hardware approval stays disabled. The public standard download, version 0.2.0, does not contain this specific pilot configuration.
 
+## Fixes for the current test
+
+**Use test build 0.2.3.** It fixes Windows helper startup for USB drivers and direct Ethernet connections, readability with dark Windows settings, and device-search feedback. Known legacy NFC/uWSGI logs are included in the backup; a dedicated application icon is included.
+
+Close the previous EXE, start the new one and choose **“Open session”**. Select the existing `session.json` in the permanent work folder. The downloaded image can be reused. Run the backup again; the wizard verifies device identity and refreshes the backup helper. Keep the existing work folder. If the old device has since resumed normal operation, create a fresh backup.
+
+On an existing LAN, use the normal device connection. The direct service connection is intended for a dedicated Ethernet cable between the PC and DLTNG. The app requests administrator rights for the relevant Windows operation.
+
+
 ## Device administrator preparation
 
 1. Read the actual CM4 serial, eMMC capacity and installed application version.

@@ -2,6 +2,15 @@
 
 Eine gesonderte Testausgabe ab Version 0.2.1 kann ein signiertes Laborimage über UPS beziehen. Die Freigabe gilt ausschließlich für eingetragene CM4-Seriennummern bis zum festgelegten Ablaufdatum. Die allgemeine Hardwarefreigabe bleibt aus. Der öffentliche Standarddownload 0.2.0 enthält diese konkrete Pilotkonfiguration nicht.
 
+## Korrekturen für den aktuellen Test
+
+**Testausgabe 0.2.3 verwenden.** Sie korrigiert den Start des Windows-Helfers für USB-Treiber und direkte Ethernet-Verbindungen, die Lesbarkeit im dunklen Windows-Design und die Rückmeldungen der Gerätesuche. Die bekannten älteren NFC-/uWSGI-Protokolle werden mitgesichert; ein eigenes Anwendungssymbol ist enthalten.
+
+Die vorherige EXE schließen, die neue EXE starten und **„Vorgang öffnen“** wählen. Dazu die bisherige `session.json` im dauerhaften Arbeitsordner auswählen. Das heruntergeladene Image kann weiterverwendet werden. Die Sicherung erneut ausführen; der Assistent prüft die Geräteidentität und aktualisiert den Sicherungshelfer. Den bisherigen Arbeitsordner aufbewahren. Falls das Altgerät zwischendurch wieder normal betrieben wurde, eine neue Sicherung erstellen.
+
+Im vorhandenen LAN genügt die normale Geräteverbindung. Die direkte Serviceverbindung ist für ein eigenes Ethernet-Kabel zwischen PC und DLTNG vorgesehen. Administratorrechte fordert die App bei der jeweiligen Windows-Aktion an.
+
+
 ## Vorbereitung durch den Gerätebetreuer
 
 1. Tatsächliche CM4-Seriennummer, eMMC-Größe und installierte Anwendungsversion auslesen.

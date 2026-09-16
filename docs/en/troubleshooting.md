@@ -14,6 +14,15 @@ Error messages describe the problem and the next action. Backups and session sta
 | Drive is in use | Close File Explorer or other programs accessing the DLTNG drive. |
 | Network unavailable after restart | Wait for startup, check power and Ethernet, and use the intended service connection. |
 
+## Fixes for the current test
+
+**Use test build 0.2.3.** It fixes Windows helper startup for USB drivers and direct Ethernet connections, readability with dark Windows settings, and device-search feedback. Known legacy NFC/uWSGI logs are included in the backup; a dedicated application icon is included.
+
+Close the previous EXE, start the new one and choose **“Open session”**. Select the existing `session.json` in the permanent work folder. The downloaded image can be reused. Run the backup again; the wizard verifies device identity and refreshes the backup helper. Keep the existing work folder. If the old device has since resumed normal operation, create a fresh backup.
+
+On an existing LAN, use the normal device connection. The direct service connection is intended for a dedicated Ethernet cable between the PC and DLTNG. The app requests administrator rights for the relevant Windows operation.
+
+
 ## Interrupted download
 
 Try again. UPS rechecks authorization; a suitable partial download can resume. The device is paused only after the complete download has been verified.

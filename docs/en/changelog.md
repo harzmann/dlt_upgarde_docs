@@ -1,4 +1,14 @@
-# Upgrade tool changelog
+# Application changelog
+
+### 0.2.3 – 2026-09-16 · Pilot fixes
+
+- Start the system helper from the actual portable EXE: USB driver and direct Ethernet setup no longer require a separate `python.exe`. Distinguish cancelled administrator prompts from launch failures.
+- Readable inputs, selection lists and folder dialogs even with dark Windows settings; smaller connection illustration and scroll reset on step changes.
+- Device discovery displays phases, progress and explicit results; shorter waits for unrelated SSH devices.
+- Dedicated icon for the window, taskbar and executable.
+- Archive and restore legacy NFC build and uWSGI logs; continue blocking unknown persistent data.
+- Recheck device identity and refresh the backup helper when resuming a backup. Existing downloads and sessions remain usable.
+- Package self-test launches the real helper read-only from the compiled EXE. Driver installation, network changes and physical flash/recovery tests remain part of hardware acceptance.
 
 ### 0.2.2 – 2026-09-16 · Original 1.0 image
 

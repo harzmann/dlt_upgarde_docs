@@ -14,6 +14,15 @@ Die Fehlermeldung nennt das Problem und einen nächsten Schritt. Sicherungen und
 | Laufwerk wird verwendet | Explorer-Fenster oder andere Programme schließen, die auf das DLTNG-Laufwerk zugreifen. |
 | Netzwerk nach Neustart nicht erreichbar | Start abwarten, Strom und LAN prüfen; den vorgesehenen Servicezugang verwenden. |
 
+## Korrekturen für den aktuellen Test
+
+**Testausgabe 0.2.3 verwenden.** Sie korrigiert den Start des Windows-Helfers für USB-Treiber und direkte Ethernet-Verbindungen, die Lesbarkeit im dunklen Windows-Design und die Rückmeldungen der Gerätesuche. Die bekannten älteren NFC-/uWSGI-Protokolle werden mitgesichert; ein eigenes Anwendungssymbol ist enthalten.
+
+Die vorherige EXE schließen, die neue EXE starten und **„Vorgang öffnen“** wählen. Dazu die bisherige `session.json` im dauerhaften Arbeitsordner auswählen. Das heruntergeladene Image kann weiterverwendet werden. Die Sicherung erneut ausführen; der Assistent prüft die Geräteidentität und aktualisiert den Sicherungshelfer. Den bisherigen Arbeitsordner aufbewahren. Falls das Altgerät zwischendurch wieder normal betrieben wurde, eine neue Sicherung erstellen.
+
+Im vorhandenen LAN genügt die normale Geräteverbindung. Die direkte Serviceverbindung ist für ein eigenes Ethernet-Kabel zwischen PC und DLTNG vorgesehen. Administratorrechte fordert die App bei der jeweiligen Windows-Aktion an.
+
+
 ## Download unterbrochen
 
 Erneut versuchen. UPS prüft die Berechtigung erneut; ein geeigneter Teil-Download kann fortgesetzt werden. Das Gerät wird erst nach vollständigem Download und Prüfung angehalten.

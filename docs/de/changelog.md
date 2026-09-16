@@ -1,4 +1,14 @@
-# Änderungen am Upgrade-Tool
+# Programmänderungen
+
+### 0.2.3 – 2026-09-16 · Pilotkorrekturen
+
+- Systemhelfer aus der tatsächlichen portablen EXE starten: USB-Treiber und direkte Ethernet-Einrichtung benötigen keine separate `python.exe` mehr. Abgebrochene Administratorabfragen und Startfehler getrennt erklären.
+- Lesbare Eingaben, Auswahllisten und Ordnerdialoge auch bei dunklem Windows-Design; kleinere Anschlussillustration und Schrittwechsel zum Seitenanfang.
+- Gerätesuche mit sichtbaren Phasen, Fortschritt und eindeutiger Ergebnisanzeige; kürzere Wartezeiten bei nicht passenden SSH-Geräten.
+- Eigenes Anwendungssymbol in Fenster, Taskleiste und EXE.
+- Ältere NFC-Build- und uWSGI-Protokolle vollständig archivieren und wiederherstellen; unbekannte Nutzdaten weiterhin sperren.
+- Bei wiederaufgenommenen Sicherungen Geräteidentität prüfen und Sicherungshelfer aktualisieren. Download und bestehende Sitzung bleiben verwendbar.
+- Paket-Selbsttest startet den echten Helfer lesend aus der gebauten EXE. Treiberinstallation, Netzwerkänderungen und physischer Flash-/Rückfalltest bleiben Teil der Geräteabnahme.
 
 ### 0.2.2 – 2026-09-16 · Originalimage 1.0
 
