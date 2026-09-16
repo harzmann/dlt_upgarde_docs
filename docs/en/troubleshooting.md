@@ -16,9 +16,9 @@ Error messages describe the problem and the next action. Backups and session sta
 
 ## Fixes for the current test
 
-**Use test build 0.2.5.** The installation confirmation is now clearly visible; its button becomes active only after ticking the box. Progress from previous steps is cleared and long checks show their own status messages. It fixes Windows helper startup for USB drivers and direct Ethernet connections, readability with dark Windows settings, and device-search feedback. Known legacy NFC/uWSGI logs are included in the backup; a dedicated application icon is included.From 0.2.4, USB steps in the foreground suppress automatic opening of the boot partition. New, enlargeable device and connector illustrations are based on original photos.
+**Use test build 0.2.6.** It tolerates Windows progress-file access errors and resumes active or successfully completed helpers. **Back** reviews completed steps without repeating operations. The compact view keeps the primary action visible and removes the picture caption. **Diagnostics** explains error codes, exports a redacted ZIP and offers user-confirmed upload to UPS.
 
-Close the previous EXE, start the new one and choose **“Open session”**. Select the existing `session.json` in the permanent work folder. The downloaded image can be reused. Run the backup again; the wizard verifies device identity and refreshes the backup helper. Keep the existing work folder. If the old device has since resumed normal operation, create a fresh backup.
+Keep the device connected while a helper is working. After it finishes, close the old EXE, start 0.2.6 and choose **“Open session”** with the current `session.json`. If multiple sessions exist, choose using their date, progress and folder; newest is listed first. Verified downloads and backups are retained. A successful saved write result leads directly to data restoration. If the original device resumed normal operation after backup, a fresh backup is required.
 
 On an existing LAN, use the normal device connection. The direct service connection is intended for a dedicated Ethernet cable between the PC and DLTNG. The app requests administrator rights for the relevant Windows operation.
 
@@ -33,7 +33,7 @@ Never treat an incomplete file as a valid backup. Open the session and follow th
 
 ## Interrupted writing
 
-Keep the work folder intact. Follow the approved instructions to return the device to programming mode, open the saved session and let the wizard write the entire image again. Full read-back verification follows. Do not try to resume manually at a guessed write position.
+Keep the work folder and first choose **Resume write monitoring**. A UI error does not necessarily mean the helper stopped. While it is running, keep power/USB connected and do not start another attempt. A saved success leads to restoration without writing again. Only after an actual helper failure/exit should you follow recovery, rediscover USB and write and verify the entire image again.
 
 ## Interrupted restoration
 
@@ -46,3 +46,21 @@ If a verified complete device backup exists, the wizard offers to write it back 
 ## Language and work folder
 
 The language preference belongs to the work folder. A new folder defaults to German. Use the flag at the top right to switch to English. A message saying the language preference cannot be saved means the folder's write permissions need checking.
+
+## Error codes and diagnostic package
+
+Select **Diagnostics** at the top, search for the error code and read its next action. The latest technical error is shown there. **Create diagnostic package in working folder** exports a ZIP timeline including available earlier sessions for the same device. Older versions did not record all technical details; missing details cannot be recreated.
+
+Packages contain device IDs, computer paths, check results and redacted app/helper logs. Passwords and session tokens are removed; customer files, databases and images are excluded. **Send diagnostic package to UPS** requires explicit confirmation, Internet access and current device/image authorisation. Failed uploads retain the local ZIP.
+
+UPS returns a checksum receipt. Logged-in administrators find packages under **System Images → Upgrade diagnostics**. Packages are retained for 30 days, are not automatically processed by AI, and have a 20 MiB upload limit.
+
+| Code | Meaning and next action |
+|---|---|
+| `APP-001`, `WIN-099` | Unexpected app/helper error. During writing, resume monitoring first; create a diagnostic package. |
+| `WIN-010` | Windows administrator prompt cancelled. Retry and approve your DLTNG app. |
+| `WIN-013` | A helper is already writing. Keep the device connected and resume monitoring. |
+| `WIN-016` | Helper exited without a complete result. Use guided recovery. |
+| `SES-007` | Write record belongs to another session. Choose the correct session; contact support. |
+| `DIA-001` | Package exceeds 20 MiB. Keep it locally and contact support. |
+| `DIA-002` | UPS rejected the upload. Keep the local ZIP; check connection and authorisation. |

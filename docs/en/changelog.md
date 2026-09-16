@@ -1,5 +1,13 @@
 # Application changelog
 
+### 0.2.6 – 2026-09-16 · Resume and diagnostics
+
+- Tolerate transient Windows progress-file locks; telemetry failures do not interrupt disk writes.
+- Resume active/completed helpers and select matching sessions by date; review earlier steps without repeating actions.
+- Compact responsive UI, no picture caption, persistent primary actions and on-demand direct network options.
+- Explicit interruption/risk/UAC warning; unplug power only after shutdown and display-off.
+- Bilingual error reference, redacted chronological logs, diagnostic ZIP and user-confirmed UPS upload.
+
 ### 0.2.5 – 2026-09-16 · Confirmation and progress
 
 - Clearly visible confirmation boxes with borders and checkmarks; disabled primary buttons appear grey.

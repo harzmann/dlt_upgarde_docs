@@ -2,7 +2,7 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
-Diese Anleitung berücksichtigt die **Testausgabe 0.2.5**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+Diese Anleitung berücksichtigt die **Testausgabe 0.2.6**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
 
 ## Vor dem Start
 
@@ -18,7 +18,7 @@ Oben rechts auf die **Landesflagge mit Sprachname** klicken und **Deutsch** oder
 
 ![Sprachwahl und Startseite](assets/ui-de.png)
 
-*Abbildung: Demomodus der Testausgabe 0.2.4.*
+*Abbildung: Demomodus der Testausgabe 0.2.6.*
 
 ## 1 · Vorbereiten
 
@@ -28,7 +28,7 @@ Oben rechts auf die **Landesflagge mit Sprachname** klicken und **Deutsch** oder
 
 PC und DLTNG an dasselbe LAN anschließen. Die IP-Adresse des DLTNG eingeben oder **„DLTNG im Netzwerk suchen“** wählen. **„Gerät prüfen“** liest Gerätekennung, Hardware und Version.
 
-Bei einem direkten Ethernet-Kabel den ausdrücklich dafür verwendeten PC-Adapter auswählen. Bei fester Geräteadresse auch die Netzgröße angeben, beispielsweise `192.168.1.25/24`. Für ein Gerät mit DHCP steht die begrenzte Hilfe **„Direktverbindung: DLTNG ohne feste IP finden“** zur Verfügung. Diese nur auf einer direkten Kabelverbindung ohne Firmennetz oder Switch aktivieren.
+Über **„Optionen für direkte Kabelverbindung anzeigen“** die zusätzlichen Einstellungen öffnen. Bei einem direkten Ethernet-Kabel den ausdrücklich dafür verwendeten PC-Adapter auswählen. Bei fester Geräteadresse auch die Netzgröße angeben, beispielsweise `192.168.1.25/24`. Für ein Gerät mit DHCP steht die begrenzte Hilfe **„Direktverbindung: DLTNG ohne feste IP finden“** zur Verfügung. Diese nur auf einer direkten Kabelverbindung ohne Firmennetz oder Switch aktivieren.
 
 ## 3 · Upgrade laden
 
@@ -50,7 +50,7 @@ Gesichert werden die bekannten Konfigurationen, Nutzdateien, lokalen Datenbanken
 
 ## 6 · USB vorbereiten
 
-**„Gerät herunterfahren“** wählen. Anschließend die **freigegebene Anleitung für die tatsächliche Trägerplatine** zum Boot-Taster und Programmierkabel befolgen. Danach **„USB-Gerät erkennen“** wählen.
+**„Gerät herunterfahren“** wählen und warten, bis das Display vollständig aus ist. Erst danach das Stromkabel abziehen. Das Ausstecken ersetzt kein geregeltes Herunterfahren. Anschließend die **freigegebene Anleitung für die tatsächliche Trägerplatine** zum Boot-Taster und Programmierkabel befolgen. Danach **„USB-Gerät erkennen“** wählen.
 
 ### Die Anschlüsse erkennen
 
@@ -77,9 +77,9 @@ Windows stellt diese [AutoPlay-Abfrage an das Vordergrundfenster](https://learn.
 
 ## 7 · Neuinstallation bestätigen
 
-Gerätekennung, Zielversion und Sicherungsstatus kontrollieren. Nur für das richtige Gerät das Kästchen **„Gerätekennung und Sicherung stimmen“** aktivieren. Danach wird **„Weiter zur Neuinstallation“** freigegeben. Dieser Klick öffnet Schritt 8; er startet noch keinen Schreibvorgang.
+Gerätekennung, Zielversion und Sicherungsstatus kontrollieren. Nur für das richtige Gerät das Kästchen **„Gerätekennung und Sicherung stimmen“** aktivieren. Es erscheint ein Hinweis zu Unterbrechung, möglicher Startunfähigkeit, eigenem Risiko und Benutzerkontensteuerung. Nur nach dessen Zustimmung bleibt das Häkchen gesetzt. Danach wird **„Weiter zur Neuinstallation“** freigegeben. Dieser Klick öffnet Schritt 8; er startet noch keinen Schreibvorgang.
 
-![Sichtbare Bestätigung in Testausgabe 0.2.5](assets/confirmation-de.png)
+![Sichtbare Bestätigung in Testausgabe 0.2.6](assets/confirmation-de.png)
 
 Fehlt das Häkchen, bleibt die Schaltfläche grau und der Status fordert zur Bestätigung auf. Vor dem eigentlichen Start steht der Fortschritt auf null.
 
@@ -102,3 +102,6 @@ Den Sicherungsordner aufbewahren. Er enthält Sicherung, Sitzungszustand und Pro
 ## Wieder aufnehmen oder zurückkehren
 
 Über **„Vorgang öffnen“** die `session.json` im bisherigen Arbeitsordner auswählen. Das Programm setzt an der passenden Stelle fort. Wenn das Altgerät nach der Sicherung wieder normal gearbeitet hat, ist eine neue Sicherung notwendig. Eine vorhandene vollständige Gerätesicherung kann über **„Ursprüngliches System wiederherstellen“** auf dasselbe Gerät zurückgeschrieben werden; danach muss dessen Start geprüft werden.
+
+
+**Zurück** zeigt bereits erledigte Schritte zur Ansicht. **Weiter** führt vorwärts, ohne Aktionen zu wiederholen. Diagnosepakete und Wiederaufnahme laufender Schreibvorgänge sind in der [Fehlerhilfe](troubleshooting.md) beschrieben.

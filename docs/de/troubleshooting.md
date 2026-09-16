@@ -16,9 +16,9 @@ Die Fehlermeldung nennt das Problem und einen nächsten Schritt. Sicherungen und
 
 ## Korrekturen für den aktuellen Test
 
-**Testausgabe 0.2.5 verwenden.** Die Bestätigung vor der Neuinstallation ist jetzt gut sichtbar; der Button wird erst nach Setzen des Häkchens aktiv. Fortschritt aus vorherigen Schritten wird zurückgesetzt und längere Prüfungen zeigen eigene Statusmeldungen. Sie korrigiert den Start des Windows-Helfers für USB-Treiber und direkte Ethernet-Verbindungen, die Lesbarkeit im dunklen Windows-Design und die Rückmeldungen der Gerätesuche. Die bekannten älteren NFC-/uWSGI-Protokolle werden mitgesichert; ein eigenes Anwendungssymbol ist enthalten. Ab 0.2.4 verhindern die USB-Schritte im Vordergrund das automatische Öffnen der Bootpartition. Neue, vergrößerbare Geräte- und Anschlussbilder basieren auf Originalfotos.
+**Testausgabe 0.2.6 verwenden.** Sie behebt Zugriffsfehler beim Austausch des Windows-Fortschritts und kann laufende oder bereits erfolgreich abgeschlossene Systemhelfer wieder aufnehmen. Die Oberfläche zeigt erledigte Schritte über **Zurück** an, ohne sie erneut auszuführen. Die kompakte Ansicht hält die Hauptaktion sichtbar; der Bildhinweis entfällt. **Diagnose** erklärt die Fehlercodes, exportiert ein bereinigtes ZIP und bietet nach Bestätigung den Versand an UPS an.
 
-Die vorherige EXE schließen, die neue EXE starten und **„Vorgang öffnen“** wählen. Dazu die bisherige `session.json` im dauerhaften Arbeitsordner auswählen. Das heruntergeladene Image kann weiterverwendet werden. Die Sicherung erneut ausführen; der Assistent prüft die Geräteidentität und aktualisiert den Sicherungshelfer. Den bisherigen Arbeitsordner aufbewahren. Falls das Altgerät zwischendurch wieder normal betrieben wurde, eine neue Sicherung erstellen.
+Lassen Sie das Gerät angeschlossen, solange ein Systemhelfer arbeitet. Nach dessen Abschluss die alte EXE schließen, 0.2.6 starten und **„Vorgang öffnen“** wählen. Die aktuelle `session.json` verwenden. Bei mehreren Vorgängen helfen Datum, Fortschritt und Ordner bei der Auswahl; der neueste steht oben. Bereits geprüfter Download und Sicherung bleiben erhalten. Ein erfolgreicher Schreibnachweis führt direkt zur Datenwiederherstellung. Falls das Altgerät nach der Sicherung wieder normal betrieben wurde, ist dagegen eine neue Sicherung erforderlich.
 
 Im vorhandenen LAN genügt die normale Geräteverbindung. Die direkte Serviceverbindung ist für ein eigenes Ethernet-Kabel zwischen PC und DLTNG vorgesehen. Administratorrechte fordert die App bei der jeweiligen Windows-Aktion an.
 
@@ -33,7 +33,7 @@ Keine unvollständige Datei als gültige Sicherung verwenden. Die Sitzung öffne
 
 ## Schreiben unterbrochen
 
-Arbeitsordner unverändert aufbewahren. Gerät anhand der freigegebenen Anleitung wieder in den Programmiermodus bringen, die gespeicherte Sitzung öffnen und das Image vollständig neu schreiben lassen. Anschließend wird wieder vollständig zurückgelesen. Nicht versuchen, an einer vermuteten Schreibposition manuell fortzusetzen.
+Arbeitsordner behalten und zuerst **Schreibstatus wieder aufnehmen**. Eine Fehlermeldung der Oberfläche bedeutet nicht zwingend, dass der Systemhelfer angehalten wurde. Während er arbeitet, Strom/USB angeschlossen lassen und keinen zweiten Versuch starten. Ein gespeicherter Erfolg führt zur Wiederherstellung ohne erneutes Schreiben. Erst bei tatsächlich fehlgeschlagenem/beendetem Helfer dem Wiederanlauf folgen, das USB-Gerät neu erkennen und das gesamte Image erneut schreiben und prüfen lassen.
 
 ## Wiederherstellung unterbrochen
 
@@ -46,3 +46,21 @@ Wenn eine geprüfte vollständige Gerätesicherung vorhanden ist, bietet der Ass
 ## Sprache und Arbeitsordner
 
 Die Sprachwahl gilt für den Arbeitsordner. Bei einem neuen Ordner startet der Assistent standardmäßig auf Deutsch. Die Flagge oben rechts wechselt auf Englisch. Eine Meldung über nicht speicherbare Spracheinstellungen bedeutet, dass Schreibrechte für diesen Ordner geprüft werden müssen.
+
+## Fehlercodes und Diagnosepaket
+
+Oben **Diagnose** wählen, nach dem Fehlercode suchen und den Handlungshinweis lesen. Der letzte technische Fehler lässt sich dort einsehen. **Diagnosepaket im Arbeitsordner erstellen** exportiert eine ZIP-Datei mit zeitlichem Verlauf einschließlich erreichbarer früherer Vorgänge desselben Geräts. Frühere Versionen haben technische Details teilweise nicht aufgezeichnet; diese können nicht nachträglich ergänzt werden.
+
+Das Paket enthält Gerätekennung, Rechnerpfade, Prüfergebnisse und bereinigte App-/Systemhelfer-Protokolle. Passwörter und Sitzungstoken werden entfernt; Nutzdateien, Datenbanken und Images werden nicht beigefügt. **Diagnosepaket an UPS senden** verlangt eine ausdrückliche Bestätigung. Internet und aktuelle Geräte-/Imagefreigabe sind erforderlich. Bei Fehlern bleibt das ZIP lokal erhalten.
+
+UPS bestätigt den Empfang mit einer Prüfsummenquittung. Pakete sind für angemeldete Administratoren unter **System-Images → Upgrade-Diagnose** verfügbar, werden 30 Tage aufbewahrt und nicht automatisch mit KI ausgewertet. Pro ZIP sind maximal 20 MiB zulässig.
+
+| Code | Bedeutung und nächster Schritt |
+|---|---|
+| `APP-001`, `WIN-099` | Unerwarteter App-/Systemhelferfehler. Bei Schreibphase zuerst Status wieder aufnehmen; Diagnosepaket erstellen. |
+| `WIN-010` | Windows-Administratorabfrage abgebrochen. Erneut starten und die eigene DLTNG-App freigeben. |
+| `WIN-013` | Ein Systemhelfer schreibt bereits. Angeschlossen lassen, dessen Status wieder aufnehmen. |
+| `WIN-016` | Systemhelfer ohne vollständiges Ergebnis beendet. Geführten Wiederanlauf verwenden. |
+| `SES-007` | Schreibnachweis gehört nicht zur Sitzung. Richtige Sitzung wählen; Support einschalten. |
+| `DIA-001` | Diagnosepaket über 20 MiB. Lokal behalten und Support kontaktieren. |
+| `DIA-002` | UPS hat den Upload nicht angenommen. Lokales ZIP behalten, Verbindung und Freigabe prüfen. |

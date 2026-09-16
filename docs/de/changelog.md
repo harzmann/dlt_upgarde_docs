@@ -1,5 +1,13 @@
 # Programmänderungen
 
+### 0.2.6 – 2026-09-16 · Wiederaufnahme und Diagnose
+
+- Windows-Fortschrittsaustausch gegen kurzzeitige Dateisperren absichern; Anzeigeausfälle unterbrechen keinen Schreibvorgang.
+- Laufende/abgeschlossene Systemhelfer wieder aufnehmen; mehrere Sitzungen nach Datum und Gerätebezug auswählen. Zurückblättern ohne erneute Ausführung.
+- Kompakte Oberfläche ohne Bildunterschrift, sichtbare Hauptaktionen, vergrößerbare Anschlussbilder und direkte Netzwerkoptionen bei Bedarf.
+- Risiko-/UAC-Dialog vor Freigabe; erst nach Herunterfahren und ausgeschaltetem Display den Stromstecker ziehen.
+- Zweisprachige Fehlercode-Hilfe, bereinigte zeitliche Protokolle, Diagnose-ZIP und bestätigter UPS-Versand.
+
 ### 0.2.5 – 2026-09-16 · Bestätigung und Fortschritt
 
 - Gut sichtbare Bestätigungskästchen mit Rahmen und Häkchen; gesperrte Hauptschaltflächen klar grau darstellen.

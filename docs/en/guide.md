@@ -2,7 +2,7 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
-This guide covers **test build 0.2.5**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+This guide covers **test build 0.2.6**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
 
 ## Before you start
 
@@ -28,7 +28,7 @@ Start `DLTNG-Upgrade.exe`. Choose the work and backup folder if needed and use *
 
 Connect the PC and DLTNG to the same LAN. Enter the DLTNG IP address or select **“Find DLTNG on the network”**. **“Check device”** reads its identity, hardware and version.
 
-For a direct Ethernet cable, select the PC adapter used specifically for that connection. For a static device address, include the network prefix, for example `192.168.1.25/24`. For a DHCP device, limited assistance is available through **“Direct connection: find DLTNG without a static IP”**. Enable this only on a direct cable connection without a company network or switch.
+Open **“Show direct cable connection options”** for additional settings. For a direct Ethernet cable, select the PC adapter used specifically for that connection. For a static device address, include the network prefix, for example `192.168.1.25/24`. For a DHCP device, limited assistance is available through **“Direct connection: find DLTNG without a static IP”**. Enable this only on a direct cable connection without a company network or switch.
 
 ## 3 · Download upgrade
 
@@ -50,7 +50,7 @@ Known configuration, data files, local databases, transfer records and device id
 
 ## 6 · Prepare USB
 
-Select **“Shut down device”**. Then follow the **approved instructions for the actual carrier board** for its boot button and programming cable. Select **“Detect USB device”** afterwards.
+Select **“Shut down device”**, wait until the display is completely off, then unplug power. Unplugging power is not a substitute for controlled shutdown. Then follow the **approved instructions for the actual carrier board** for its boot button and programming cable. Select **“Detect USB device”** afterwards.
 
 ### Identify the connectors
 
@@ -77,9 +77,9 @@ Windows sends this [AutoPlay query to the foreground window](https://learn.micro
 
 ## 7 · Confirm installation
 
-Check the device identity, target version and backup status. For the correct device only, tick **“The device identity and backup are correct”**. This enables **“Continue to installation”**. That click opens step 8; it does not start writing yet.
+Check the device identity, target version and backup status. For the correct device only, tick **“The device identity and backup are correct”**. A warning explains interruption, possible boot failure, own risk and User Account Control. The checkbox remains ticked only if you accept. This enables **“Continue to installation”**. That click opens step 8; it does not start writing yet.
 
-![Visible confirmation in test build 0.2.5](assets/confirmation-en.png)
+![Visible confirmation in test build 0.2.6](assets/confirmation-en.png)
 
 Without the checkmark, the button stays grey and the status asks for confirmation. Progress stays at zero before the operation starts.
 
@@ -102,3 +102,6 @@ Keep the backup folder. It contains your backup, session state and log and is ne
 ## Resume or recover
 
 Use **“Open session”** to select `session.json` in the previous work folder. The application resumes at the appropriate step. If the original device resumed normal operation after backup, create a new backup. An available complete device backup can be written back to the same device using **“Restore original system”**; its startup must then be checked.
+
+
+**Back** reviews completed steps. **Next** moves forward without repeating operations. See [Troubleshooting](troubleshooting.md) for diagnostic packages and resuming write monitoring.

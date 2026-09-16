@@ -4,9 +4,9 @@ A separately configured test build, version 0.2.1 or later, can retrieve a signe
 
 ## Fixes for the current test
 
-**Use test build 0.2.5.** The installation confirmation is now clearly visible; its button becomes active only after ticking the box. Progress from previous steps is cleared and long checks show their own status messages. It fixes Windows helper startup for USB drivers and direct Ethernet connections, readability with dark Windows settings, and device-search feedback. Known legacy NFC/uWSGI logs are included in the backup; a dedicated application icon is included.From 0.2.4, USB steps in the foreground suppress automatic opening of the boot partition. New, enlargeable device and connector illustrations are based on original photos.
+**Use test build 0.2.6.** It tolerates Windows progress-file access errors and resumes active or successfully completed helpers. **Back** reviews completed steps without repeating operations. The compact view keeps the primary action visible and removes the picture caption. **Diagnostics** explains error codes, exports a redacted ZIP and offers user-confirmed upload to UPS.
 
-Close the previous EXE, start the new one and choose **“Open session”**. Select the existing `session.json` in the permanent work folder. The downloaded image can be reused. Run the backup again; the wizard verifies device identity and refreshes the backup helper. Keep the existing work folder. If the old device has since resumed normal operation, create a fresh backup.
+Keep the device connected while a helper is working. After it finishes, close the old EXE, start 0.2.6 and choose **“Open session”** with the current `session.json`. If multiple sessions exist, choose using their date, progress and folder; newest is listed first. Verified downloads and backups are retained. A successful saved write result leads directly to data restoration. If the original device resumed normal operation after backup, a fresh backup is required.
 
 On an existing LAN, use the normal device connection. The direct service connection is intended for a dedicated Ethernet cable between the PC and DLTNG. The app requests administrator rights for the relevant Windows operation.
 
