@@ -2,7 +2,7 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
-The connector illustrations and Explorer suppression below are included in **test build 0.2.4**. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+This guide covers **test build 0.2.5**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
 
 ## Before you start
 
@@ -77,11 +77,15 @@ Windows sends this [AutoPlay query to the foreground window](https://learn.micro
 
 ## 7 · Confirm installation
 
-Check the device identity, target version and backup status. Enable confirmation only for the correct device and select **“Prepare installation”**. If selected, the complete device backup is created and verified before overwriting.
+Check the device identity, target version and backup status. For the correct device only, tick **“The device identity and backup are correct”**. This enables **“Continue to installation”**. That click opens step 8; it does not start writing yet.
+
+![Visible confirmation in test build 0.2.5](assets/confirmation-en.png)
+
+Without the checkmark, the button stays grey and the status asks for confirmation. Progress stays at zero before the operation starts.
 
 ## 8 · Write system
 
-**“Write system now”** starts writing. Keep power and USB connected. The application reads back the entire written region and compares it with the image. Normal cancellation is unavailable during this operation.
+**“Write system now”** starts the operation. If selected, the complete device backup is created and verified first; writing and read-back follow. The current phase is shown as text, with percentages for measurable file operations. Keep power and USB connected. The application reads back the entire written region and compares it with the image. Normal cancellation is unavailable during this operation.
 
 If interrupted, use [guided recovery](troubleshooting.md). Retrying never overwrites an existing original complete device backup.
 

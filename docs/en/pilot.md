@@ -4,7 +4,7 @@ A separately configured test build, version 0.2.1 or later, can retrieve a signe
 
 ## Fixes for the current test
 
-**Use test build 0.2.4.** It fixes Windows helper startup for USB drivers and direct Ethernet connections, readability with dark Windows settings, and device-search feedback. Known legacy NFC/uWSGI logs are included in the backup; a dedicated application icon is included.From 0.2.4, USB steps in the foreground suppress automatic opening of the boot partition. New, enlargeable device and connector illustrations are based on original photos.
+**Use test build 0.2.5.** The installation confirmation is now clearly visible; its button becomes active only after ticking the box. Progress from previous steps is cleared and long checks show their own status messages. It fixes Windows helper startup for USB drivers and direct Ethernet connections, readability with dark Windows settings, and device-search feedback. Known legacy NFC/uWSGI logs are included in the backup; a dedicated application icon is included.From 0.2.4, USB steps in the foreground suppress automatic opening of the boot partition. New, enlargeable device and connector illustrations are based on original photos.
 
 Close the previous EXE, start the new one and choose **“Open session”**. Select the existing `session.json` in the permanent work folder. The downloaded image can be reused. Run the backup again; the wizard verifies device identity and refreshes the backup helper. Keep the existing work folder. If the old device has since resumed normal operation, create a fresh backup.
 

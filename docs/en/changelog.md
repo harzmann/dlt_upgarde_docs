@@ -1,5 +1,13 @@
 # Application changelog
 
+### 0.2.5 – 2026-09-16 · Confirmation and progress
+
+- Clearly visible confirmation boxes with borders and checkmarks; disabled primary buttons appear grey.
+- Show approval and device details directly on the confirmation step. “Continue to installation” stays disabled until checked; direct action calls cannot bypass approval either.
+- Clear the previous USB detection progress before installation. Distinguish confirmation, readiness and an active installation.
+- Percentages and dedicated status messages while verifying the required backup, complete device backup and image before writing. Display the version in the window title.
+- Mouse/keyboard confirmation, one start per operation and byte progress checked using temporary test files; no physical device written.
+
 ### 0.2.4 – 2026-09-16 · USB display and device illustrations
 
 - Suppress automatic opening of the boot partition during USB steps and recovery while the wizard or its enlarged connector view is in the foreground. No persistent Windows settings change.

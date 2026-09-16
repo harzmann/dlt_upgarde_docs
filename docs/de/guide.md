@@ -2,7 +2,7 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
-Die folgenden Anschlussbilder und die Explorer-Unterdrückung sind in der **Testausgabe 0.2.4** enthalten. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+Diese Anleitung berücksichtigt die **Testausgabe 0.2.5**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
 
 ## Vor dem Start
 
@@ -77,11 +77,15 @@ Windows stellt diese [AutoPlay-Abfrage an das Vordergrundfenster](https://learn.
 
 ## 7 · Neuinstallation bestätigen
 
-Gerätekennung, Zielversion und Sicherungsstatus kontrollieren. Nur für das richtige Gerät die Bestätigung aktivieren und **„Neuinstallation vorbereiten“** wählen. Eine ausgewählte vollständige Gerätesicherung wird vor dem Überschreiben erstellt und geprüft.
+Gerätekennung, Zielversion und Sicherungsstatus kontrollieren. Nur für das richtige Gerät das Kästchen **„Gerätekennung und Sicherung stimmen“** aktivieren. Danach wird **„Weiter zur Neuinstallation“** freigegeben. Dieser Klick öffnet Schritt 8; er startet noch keinen Schreibvorgang.
+
+![Sichtbare Bestätigung in Testausgabe 0.2.5](assets/confirmation-de.png)
+
+Fehlt das Häkchen, bleibt die Schaltfläche grau und der Status fordert zur Bestätigung auf. Vor dem eigentlichen Start steht der Fortschritt auf null.
 
 ## 8 · System schreiben
 
-**„System jetzt schreiben“** startet den Schreibvorgang. Stromversorgung und USB-Verbindung bestehen lassen. Das Programm liest den gesamten geschriebenen Bereich zurück und vergleicht ihn mit dem Image. Währenddessen ist kein normaler Abbruch vorgesehen.
+**„System jetzt schreiben“** startet den Vorgang. Eine ausgewählte vollständige Gerätesicherung wird zuerst erstellt und geprüft; danach folgen Schreiben und Rücklesen. Die jeweilige Phase wird als Text angezeigt, bei messbaren Dateioperationen zusätzlich mit Prozentangabe. Stromversorgung und USB-Verbindung bestehen lassen. Das Programm liest den gesamten geschriebenen Bereich zurück und vergleicht ihn mit dem Image. Währenddessen ist kein normaler Abbruch vorgesehen.
 
 Bei Unterbrechung den [geführten Wiederanlauf](troubleshooting.md) verwenden. Eine ursprüngliche vollständige Gerätesicherung wird bei Wiederholung nicht überschrieben.
 

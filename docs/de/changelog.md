@@ -1,5 +1,13 @@
 # Programmänderungen
 
+### 0.2.5 – 2026-09-16 · Bestätigung und Fortschritt
+
+- Gut sichtbare Bestätigungskästchen mit Rahmen und Häkchen; gesperrte Hauptschaltflächen klar grau darstellen.
+- Im Bestätigungsschritt die Freigabe und Geräteübersicht direkt anzeigen. Ohne Bestätigung bleibt „Weiter zur Neuinstallation“ gesperrt; auch direkte Aktionsaufrufe können die Freigabe nicht überspringen.
+- Vor dem Start keinen abgeschlossenen Fortschritt aus der USB-Erkennung anzeigen. Klar zwischen Bestätigung, Startbereitschaft und laufender Neuinstallation unterscheiden.
+- Prozentangaben und eigene Statusmeldungen für Prüfung der Pflichtsicherung, der vollständigen Gerätesicherung und des Images vor dem Schreiben. Version im Fenstertitel anzeigen.
+- Bestätigung per Maus/Tastatur, genau einen Start pro Vorgang und Fortschritt mit temporären Testdateien geprüft; kein reales Gerät beschrieben.
+
 ### 0.2.4 – 2026-09-16 · USB-Anzeige und Gerätebilder
 
 - Automatisches Öffnen der Bootpartition während der USB-Schritte und Rückfallwiederherstellung unterdrücken, solange der Assistent oder sein vergrößertes Anschlussbild im Vordergrund ist. Keine dauerhafte Änderung der Windows-Einstellungen.
