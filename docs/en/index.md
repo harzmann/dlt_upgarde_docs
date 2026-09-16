@@ -8,6 +8,8 @@ Back up, reinstall, restore — with a clear Windows wizard.
 
 ![DLTNG Upgrade in English](assets/ui-en.png)
 
+*Screenshot: test build 0.2.4 in demo mode.*
+
 ## What does DLTNG Upgrade do?
 
 DLTNG Upgrade guides you through reinstalling a CM4 DLTNG. Settings, data files and databases are backed up before the device is overwritten. The wizard then restores the data into the new system and checks the result.

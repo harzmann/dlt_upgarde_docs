@@ -8,6 +8,8 @@ Sichern, neu installieren, wiederherstellen – mit einem verständlichen Assist
 
 ![DLTNG Upgrade auf Deutsch](assets/ui-de.png)
 
+*Abbildung: Demomodus der Testausgabe 0.2.4.*
+
 ## Was macht DLTNG Upgrade?
 
 DLTNG Upgrade führt durch die vollständige Neuinstallation eines CM4-DLTNG. Vor dem Überschreiben werden Einstellungen, Nutzdateien und Datenbanken gesichert. Anschließend übernimmt der Assistent die Daten in das neue System und prüft das Ergebnis.

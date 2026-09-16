@@ -18,6 +18,8 @@ Oben rechts auf die **Landesflagge mit Sprachname** klicken und **Deutsch** oder
 
 ![Sprachwahl und Startseite](assets/ui-de.png)
 
+*Abbildung: Demomodus der Testausgabe 0.2.4.*
+
 ## 1 · Vorbereiten
 
 `DLTNG-Upgrade.exe` starten. Bei Bedarf den Arbeits- und Sicherungsordner wählen und **„USB-Treiber einrichten“** verwenden. **„Vorbereitung prüfen“** kontrolliert die PC-Voraussetzungen. Zum gefahrlosen Kennenlernen **„Demo ausprobieren“** wählen.

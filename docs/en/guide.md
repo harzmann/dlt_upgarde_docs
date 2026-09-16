@@ -18,6 +18,8 @@ Click the **country flag and language name** at the top right and select **Deuts
 
 ![Language selection and start page](assets/ui-en.png)
 
+*Screenshot: test build 0.2.4 in demo mode.*
+
 ## 1 · Prepare
 
 Start `DLTNG-Upgrade.exe`. Choose the work and backup folder if needed and use **“Set up USB driver”** when required. **“Check preparation”** checks the PC prerequisites. Select **“Try the demo”** to explore the workflow without changing a device.
