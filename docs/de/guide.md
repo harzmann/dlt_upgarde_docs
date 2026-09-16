@@ -2,6 +2,8 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
+Die folgenden Anschlussbilder und die Explorer-Unterdrückung sind in der **Testausgabe 0.2.4** enthalten. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+
 ## Vor dem Start
 
 - Windows 11 x64 verwenden; ein Gerät pro Vorgang.
@@ -42,15 +44,34 @@ Karten und USB-Datenträger entfernen und das Ende laufender Vorgänge abwarten.
 
 Gesichert werden die bekannten Konfigurationen, Nutzdateien, lokalen Datenbanken, Übertragungsnachweise und Geräteidentitätsdaten. Unbekannte dauerhafte Datenbestände stoppen den Ablauf zur Klärung. Bei externen Datenbankservern werden die Verbindungseinstellungen übernommen; deren Daten werden nicht zurückgeschrieben.
 
-![Datensicherung](assets/backup.png)
+![Symbolische DLTNG-Front nach Originalfoto](assets/dltng-front-v1.png)
 
 ## 6 · USB vorbereiten
 
 **„Gerät herunterfahren“** wählen. Anschließend die **freigegebene Anleitung für die tatsächliche Trägerplatine** zum Boot-Taster und Programmierkabel befolgen. Danach **„USB-Gerät erkennen“** wählen.
 
-!!! note "Symbolische Bilder"
+### Die Anschlüsse erkennen
 
-    Die Bilder zeigen keine verbindliche Tasterposition oder Steckerbelegung. Reale Anschlussfotos und die genaue Handgriffreihenfolge müssen für die Kundenfreigabe noch am Gerät geprüft werden. Bei Unklarheit hier anhalten und den Gerätebetreuer hinzuziehen.
+![DLTNG-Anschlüsse nach Originalfoto, mit Nummern](assets/dltng-connectors-numbered.png)
+
+Von links nach rechts:
+
+| Nummer | Anschluss |
+|---|---|
+| 1 | Stromversorgung, mit gestecktem schwarzem Kabel |
+| 2 | RJ45 Ethernet / Netzwerk, mit gestecktem blauem Kabel |
+| 3 | Zwei übereinanderliegende USB-Anschlüsse |
+| 4 | HDMI |
+| 5 | USB-Admin für das Programmierkabel, mit gestecktem rotem Kabel |
+| 6 | Versenkter Admin-Taster; lässt sich leicht mit einem Kugelschreiber betätigen |
+
+In der App öffnet **„Anschlüsse größer anzeigen“** die Detailansicht. Die Legende wechselt mit der Sprache. Die Symbolbilder basieren auf den gelieferten Fotos dieses DLTNG. Die genaue Folge von Tasterbetätigung, Stromversorgung und Kabelanschluss ist weiterhin anhand der Geräteanleitung am realen Gerät zu prüfen.
+
+### Automatisches Explorer-Fenster verhindern
+
+Während der USB-Schritte den Assistenten im Vordergrund lassen. Ab Testausgabe **0.2.4** unterdrückt er dann das automatische Öffnen der Bootpartition, auch bei geöffneter Anschlussvergrößerung und während der Rückfallwiederherstellung. Dafür sind keine dauerhaften Windows-Einstellungen erforderlich. Bereits offene Explorer-Fenster bleiben geöffnet. Der Demomodus unterdrückt AutoPlay nicht.
+
+Windows stellt diese [AutoPlay-Abfrage an das Vordergrundfenster](https://learn.microsoft.com/en-us/windows/win32/shell/autoplay-reg). Wenn eine andere Anwendung im Vordergrund ist, kann sich der Explorer weiterhin öffnen.
 
 ## 7 · Neuinstallation bestätigen
 

@@ -38,7 +38,7 @@ Vorgesehen sind CM4-Geräte mit 16 oder 32 GB eMMC und bestehende DLTNG-Versione
 
 !!! info "Aktueller Stand: Entwicklungsausgabe @@VERSION@@"
 
-    Der Download ist öffentlich. Die Ausgabe ist zum Ausprobieren des vollständigen Demomodus und für vorbereitete Labortests gedacht. Kunden-Flashvorgänge bleiben bis zur dokumentierten Hardwarefreigabe gesperrt. Reale Gerätemigrationen, Unterbrechungstests und genaue Anschlussbilder sind noch abzunehmen.
+    Der Download ist öffentlich. Die Ausgabe ist zum Ausprobieren des vollständigen Demomodus und für vorbereitete Labortests gedacht. Kunden-Flashvorgänge bleiben bis zur dokumentierten Hardwarefreigabe gesperrt. Reale Gerätemigrationen, Unterbrechungstests und die bebilderte Handgriffreihenfolge sind noch abzunehmen.
 
 Das gebaute bereinigte Testimage ist softwareseitig geprüft. Das ist noch keine Bestätigung eines erfolgreichen physischen Geräte-Upgrades. [Image-Changelog ansehen](image-changelog.md).
 

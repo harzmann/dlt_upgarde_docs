@@ -1,5 +1,12 @@
 # Application changelog
 
+### 0.2.4 – 2026-09-16 · USB display and device illustrations
+
+- Suppress automatic opening of the boot partition during USB steps and recovery while the wizard or its enlarged connector view is in the foreground. No persistent Windows settings change.
+- Symbolic DLTNG front and connector illustrations based on original photos; six numbered connector groups, translated legend and enlarged view.
+- Distinguish USB-Admin from the recessed Admin pushbutton, with guidance on gently pressing it using a ballpoint pen.
+- Actual Windows messages checked for the wizard and image dialog; demo mode and steps outside USB remain unaffected. Physical USB connection testing remains part of hardware acceptance.
+
 ### 0.2.3 – 2026-09-16 · Pilot fixes
 
 - Deliver background-task completion to the UI thread, fixing intermittent crashes during step changes.

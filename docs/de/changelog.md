@@ -1,5 +1,12 @@
 # Programmänderungen
 
+### 0.2.4 – 2026-09-16 · USB-Anzeige und Gerätebilder
+
+- Automatisches Öffnen der Bootpartition während der USB-Schritte und Rückfallwiederherstellung unterdrücken, solange der Assistent oder sein vergrößertes Anschlussbild im Vordergrund ist. Keine dauerhafte Änderung der Windows-Einstellungen.
+- Symbolische DLTNG-Front- und Anschlussdarstellung anhand der Originalfotos; sechs nummerierte Anschlussgruppen, übersetzbare Legende und vergrößerte Ansicht.
+- USB-Admin und versenkten Admin-Taster getrennt kennzeichnen; Hinweis zur leichten Betätigung mit einem Kugelschreiber.
+- Echte Windows-Nachrichten für Assistent und Bilddialog geprüft; Demomodus und Schritte außerhalb des USB-Vorgangs bleiben ausgenommen. Physischer USB-Anstecktest bleibt Teil der Geräteabnahme.
+
 ### 0.2.3 – 2026-09-16 · Pilotkorrekturen
 
 - Abschlussmeldungen aus Hintergrundarbeiten ausschließlich im Oberflächenthread verarbeiten; gelegentlichen Absturz bei Schrittwechseln beheben.

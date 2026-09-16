@@ -2,6 +2,8 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
+The connector illustrations and Explorer suppression below are included in **test build 0.2.4**. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+
 ## Before you start
 
 - Use Windows 11 x64; connect one device per operation.
@@ -42,15 +44,34 @@ Remove cards and USB storage devices and wait for active operations to finish. *
 
 Known configuration, data files, local databases, transfer records and device identity data are included. Unknown persistent data stops the workflow for review. For external database servers, connection settings are retained; their data is not restored to the device.
 
-![Data backup](assets/backup.png)
+![Symbolic DLTNG front based on the original photo](assets/dltng-front-v1.png)
 
 ## 6 · Prepare USB
 
 Select **“Shut down device”**. Then follow the **approved instructions for the actual carrier board** for its boot button and programming cable. Select **“Detect USB device”** afterwards.
 
-!!! note "Symbolic illustrations"
+### Identify the connectors
 
-    The illustrations do not define the actual button location or connector pinout. Real connector photos and the exact sequence of actions still need to be verified on hardware before customer approval. If unsure, stop here and contact the device administrator.
+![DLTNG connectors based on the original photo, with numbers](assets/dltng-connectors-numbered.png)
+
+From left to right:
+
+| Number | Connector |
+|---|---|
+| 1 | Power supply, with black cable connected |
+| 2 | RJ45 Ethernet / network, with blue cable connected |
+| 3 | Two vertically stacked USB ports |
+| 4 | HDMI |
+| 5 | USB-Admin for the programming cable, with red cable connected |
+| 6 | Recessed Admin pushbutton; can be pressed gently with a ballpoint pen |
+
+In the app, **“Enlarge connector illustration”** opens the detailed view. The legend follows the selected language. These symbolic illustrations are based on the supplied photos of this DLTNG. The exact button, power and cable sequence still needs to be checked on the physical device using its instructions.
+
+### Prevent the automatic Explorer window
+
+Keep the wizard in the foreground during the USB steps. From test build **0.2.4**, it then suppresses automatic opening of the boot partition, including while viewing the enlarged connector illustration and during full-image recovery. No persistent Windows setting changes are required. Existing Explorer windows remain open. Demo mode does not suppress AutoPlay.
+
+Windows sends this [AutoPlay query to the foreground window](https://learn.microsoft.com/en-us/windows/win32/shell/autoplay-reg). If another application is in the foreground, Explorer may still open.
 
 ## 7 · Confirm installation
 

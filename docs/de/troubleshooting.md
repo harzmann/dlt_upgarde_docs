@@ -16,7 +16,7 @@ Die Fehlermeldung nennt das Problem und einen nächsten Schritt. Sicherungen und
 
 ## Korrekturen für den aktuellen Test
 
-**Testausgabe 0.2.3 verwenden.** Sie korrigiert den Start des Windows-Helfers für USB-Treiber und direkte Ethernet-Verbindungen, die Lesbarkeit im dunklen Windows-Design und die Rückmeldungen der Gerätesuche. Die bekannten älteren NFC-/uWSGI-Protokolle werden mitgesichert; ein eigenes Anwendungssymbol ist enthalten.
+**Testausgabe 0.2.4 verwenden.** Sie korrigiert den Start des Windows-Helfers für USB-Treiber und direkte Ethernet-Verbindungen, die Lesbarkeit im dunklen Windows-Design und die Rückmeldungen der Gerätesuche. Die bekannten älteren NFC-/uWSGI-Protokolle werden mitgesichert; ein eigenes Anwendungssymbol ist enthalten. Ab 0.2.4 verhindern die USB-Schritte im Vordergrund das automatische Öffnen der Bootpartition. Neue, vergrößerbare Geräte- und Anschlussbilder basieren auf Originalfotos.
 
 Die vorherige EXE schließen, die neue EXE starten und **„Vorgang öffnen“** wählen. Dazu die bisherige `session.json` im dauerhaften Arbeitsordner auswählen. Das heruntergeladene Image kann weiterverwendet werden. Die Sicherung erneut ausführen; der Assistent prüft die Geräteidentität und aktualisiert den Sicherungshelfer. Den bisherigen Arbeitsordner aufbewahren. Falls das Altgerät zwischendurch wieder normal betrieben wurde, eine neue Sicherung erstellen.
 

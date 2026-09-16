@@ -38,7 +38,7 @@ The intended devices are CM4 models with 16 or 32 GB eMMC running DLTNG 9.5 or 1
 
 !!! info "Current status: development edition @@VERSION@@"
 
-    The download is public. This edition is intended for trying the complete demo and prepared lab tests. Customer flashing remains disabled until hardware approval is documented. Real migrations, interruption tests and exact connector illustrations still require validation.
+    The download is public. This edition is intended for trying the complete demo and prepared lab tests. Customer flashing remains disabled until hardware approval is documented. Real migrations, interruption tests and the illustrated action sequence still require validation.
 
 The clean test image has been built and checked in software. This does not confirm a successful upgrade of a physical device. [Read the image changelog](image-changelog.md).
 
