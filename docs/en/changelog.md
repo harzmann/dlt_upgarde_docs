@@ -2,6 +2,7 @@
 
 ### 0.2.3 – 2026-09-16 · Pilot fixes
 
+- Deliver background-task completion to the UI thread, fixing intermittent crashes during step changes.
 - Start the system helper from the actual portable EXE: USB driver and direct Ethernet setup no longer require a separate `python.exe`. Distinguish cancelled administrator prompts from launch failures.
 - Readable inputs, selection lists and folder dialogs even with dark Windows settings; smaller connection illustration and scroll reset on step changes.
 - Device discovery displays phases, progress and explicit results; shorter waits for unrelated SSH devices.

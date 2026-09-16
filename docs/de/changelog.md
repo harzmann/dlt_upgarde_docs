@@ -2,6 +2,7 @@
 
 ### 0.2.3 – 2026-09-16 · Pilotkorrekturen
 
+- Abschlussmeldungen aus Hintergrundarbeiten ausschließlich im Oberflächenthread verarbeiten; gelegentlichen Absturz bei Schrittwechseln beheben.
 - Systemhelfer aus der tatsächlichen portablen EXE starten: USB-Treiber und direkte Ethernet-Einrichtung benötigen keine separate `python.exe` mehr. Abgebrochene Administratorabfragen und Startfehler getrennt erklären.
 - Lesbare Eingaben, Auswahllisten und Ordnerdialoge auch bei dunklem Windows-Design; kleinere Anschlussillustration und Schrittwechsel zum Seitenanfang.
 - Gerätesuche mit sichtbaren Phasen, Fortschritt und eindeutiger Ergebnisanzeige; kürzere Wartezeiten bei nicht passenden SSH-Geräten.
