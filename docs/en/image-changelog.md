@@ -4,9 +4,11 @@ This history includes earlier migration images as well as the clean profile used
 
 ## Pilot delivery – 2026-09-16
 
+- Additional signed approval for the assessed original image with application version `1`/`1.0`, requiring the separate 0.2.2 test build. Image bytes are unchanged; the app supplies the updated backup/migration helper after session verification.
+- Isolated database, file and configuration restoration passed; physical acceptance remains pending. Older upload files without reliable receipts require Offline mode.
 - The clean image from 15 September is delivered unchanged through UPS for an explicitly registered CM4 test device.
 - Signed manifest with an expiry date and a separate Upgrade 0.2.1 test build. Approval is bound to the test device, 32 GB hardware profile and source version.
-- Source versions accepted by this pilot: 9.5, 10.0.0-rc.3 and 10.0.0-rc.4. Direct migration from application 1.0 has not been verified.
+- The initial pilot accepts source versions 9.5, 10.0.0-rc.3 and 10.0.0-rc.4. Additional approval with Upgrade 0.2.2 also supports the assessed 1.0 profile.
 - No general hardware or customer approval. See [Pilot test](pilot.md) for the procedure and outstanding checks.
 
 ## 10.0.0-rc.4-startup.1-clean-update – 2026-09-15

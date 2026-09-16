@@ -1,5 +1,13 @@
 # Änderungen am Upgrade-Tool
 
+### 0.2.2 – 2026-09-16 · Originalimage 1.0
+
+- Eigenes Profil für die im Originalimage gespeicherte Version `1` sowie `1.0`/`1.0.0`, Debian 11 und Python 3.9.
+- Alte Zertifikate erhalten, NFC-Konfiguration als Archiv sichern und Entwicklungsrechner-Pfade für erzeugte Berichte korrigieren.
+- MariaDB-Schema vor Sicherung und nach Import prüfen; fehlende lokale Datenbankwerkzeuge sperren die Sicherung. FTP-/SMB-Schreibdienste während der Sicherung anhalten.
+- Bei älteren Upload-Dateien ohne sichere Übertragungsnachweise Offline-Modus verlangen, damit das Upgrade keine erneute Übertragung auslöst.
+- Wiederherstellung mit der tatsächlichen Originaldatenbank, Konfiguration, Zertifikaten und zusätzlichen DDD-/CSV-Dateien einschließlich wiederholtem Import geprüft. Physische Geräteabnahme bleibt offen.
+
 ### 0.2.1 – 2026-09-16 · Pilotvorbereitung
 
 - Signierte Pilotimages über UPS; an explizite CM4-Seriennummern und ein Ablaufdatum gebunden.

@@ -4,9 +4,11 @@ Diese Historie umfasst frühere Migrationsimages und das bereinigte Profil für 
 
 ## Pilotbereitstellung – 2026-09-16
 
+- Ergänzende signierte Freigabe für das geprüfte Originalimage mit Anwendungskennung `1`/`1.0`; benötigt die separate Testausgabe 0.2.2. Image-Datei unverändert, aktualisierter Sicherungs-/Migrationshelfer wird sitzungsgeprüft durch die App bereitgestellt.
+- Datenbank-, Datei- und Konfigurationswiederherstellung isoliert geprüft; physische Geräteabnahme bleibt offen. Bei älteren Upload-Dateien ohne Übertragungsnachweise ist Offline-Modus erforderlich.
 - Das bereinigte Image vom 15. September wird unverändert über UPS für ein ausdrücklich registriertes CM4-Testgerät bereitgestellt.
 - Signiertes Manifest mit Ablaufdatum und separater Upgrade-Testausgabe 0.2.1. Die Freigabe ist an Testgerät, 32-GB-Hardwareprofil und Ausgangsversion gebunden.
-- Unterstützte Ausgangsversionen dieses Piloten: 9.5, 10.0.0-rc.3 und 10.0.0-rc.4. Ein direkter Übergang aus Anwendung 1.0 ist noch nicht geprüft.
+- Ausgangsversionen der ersten Pilotfreigabe: 9.5, 10.0.0-rc.3 und 10.0.0-rc.4. Die ergänzende Freigabe ab Upgrade 0.2.2 unterstützt zusätzlich das geprüfte 1.0-Profil.
 - Keine allgemeine Hardware- oder Kundenfreigabe. Ablauf und offene Prüfungen stehen unter [Pilottest](pilot.md).
 
 ## 10.0.0-rc.4-startup.1-clean-update – 2026-09-15

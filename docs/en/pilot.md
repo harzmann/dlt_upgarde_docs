@@ -13,9 +13,11 @@ A separately configured test build, version 0.2.1 or later, can retrieve a signe
 
 ## Starting from version 1.0
 
-**Direct upgrading from DLTNG 1.0 has not been verified.** The application stops with `SRC-001` before installing a backup helper. The original image first needs assessment of its data layout, Python version and database migration.
+**The separate 0.2.2 pilot build supports a direct test from the assessed original 1.0 image.** `CM4_DLT_231119_V9_X.img` stores application version `1`. Debian 11, Python 3.9, configuration and the real MariaDB database were inspected. Isolated backup/restoration of 19 tables, six views, certificates and DDD/CSV fixtures passed, including repeated import. Physical-device acceptance remains pending.
 
-The existing application update from 1.0 to 9.5 can be tested as a preparatory route. Its UPS download entitlement has been checked; actual installation and migration on the device remain pending. Start the image-upgrade test only after checking that version 9.5 is actually installed. Approving a version number alone does not replace migration assessment.
+Updating to 9.5 first is unnecessary for this pilot. The new signed approval requires Upgrade 0.2.2 or later. The previous 0.2.1 pilot executable and public standard download 0.2.0 do not support this direct path.
+
+**If upload files exist:** Set transmission to **Offline** on the old device and review which files were already sent. Version 1 has no reliable transfer receipts. All files are backed up and restored; Offline remains active. Enable transmission only after reviewing the queue. The wizard never invents acknowledgements.
 
 ## Run the test
 

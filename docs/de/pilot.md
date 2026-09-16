@@ -13,9 +13,11 @@ Eine gesonderte Testausgabe ab Version 0.2.1 kann ein signiertes Laborimage übe
 
 ## Ausgangsversion 1.0
 
-**Ein direktes Upgrade aus DLTNG 1.0 ist noch nicht geprüft.** Die App hält diese Version vor Installation eines Sicherungshelfers mit `SRC-001` an. Das Originalimage muss zunächst auf Datenstruktur, Python-Version und Datenbankmigration geprüft werden.
+**Die gesonderte Pilotversion 0.2.2 unterstützt den direkten Test aus dem geprüften Originalimage 1.0.** Das Image `CM4_DLT_231119_V9_X.img` speichert die Anwendungskennung `1`. Debian 11, Python 3.9, Konfigurationen und die tatsächliche MariaDB-Datenbank wurden untersucht. Sicherung und Wiederherstellung mit 19 Tabellen, sechs Ansichten, Zertifikaten und DDD-/CSV-Testdateien einschließlich wiederholtem Import wurden isoliert geprüft. Die physische Geräteabnahme bleibt offen.
 
-Als vorbereitender Weg kann das vorhandene Softwareupdate von 1.0 auf 9.5 getestet werden. Bisher ist dessen UPS-Downloadberechtigung geprüft; die tatsächliche Installation und Migration am Gerät stehen noch aus. Erst nach Kontrolle der tatsächlich installierten Version 9.5 beginnt der Image-Upgrade-Test. Die Freigabe einer Versionsnummer allein ersetzt keine Migrationsprüfung.
+Für diesen Pilottest ist kein Zwischenupdate auf 9.5 erforderlich. Die neue signierte Freigabe verlangt mindestens Upgrade 0.2.2. Die frühere Pilot-EXE 0.2.1 und der öffentliche Standarddownload 0.2.0 eignen sich nicht für diesen direkten Weg.
+
+**Wenn Upload-Dateien vorhanden sind:** Am Altgerät zunächst die Übertragung auf **Offline** stellen und klären, welche Dateien bereits gesendet wurden. Version 1 führt noch keine zuverlässigen Übertragungsnachweise. Alle Dateien werden gesichert und wiederhergestellt; Offline bleibt aktiv. Erst nach Prüfung des Versandstatus die Übertragung wieder einschalten. Der Assistent erzeugt keine erfundenen Versandbestätigungen.
 
 ## Test durchführen
 

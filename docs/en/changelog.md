@@ -1,5 +1,13 @@
 # Upgrade tool changelog
 
+### 0.2.2 – 2026-09-16 · Original 1.0 image
+
+- Separate profile for the original image's stored version `1`, plus `1.0`/`1.0.0`, Debian 11 and Python 3.9.
+- Preserve old certificates, archive NFC configuration and correct development-machine paths for generated reports.
+- Check the MariaDB schema before backup and after import; missing local database tools block backup. Pause FTP/SMB writers during backup.
+- Require offline mode for older upload files without reliable receipts, preventing automatic retransmission caused by the upgrade.
+- Rehearsed restoration of the actual original database, settings and certificates plus DDD/CSV fixtures, including repeated import. Physical-device acceptance remains pending.
+
 ### 0.2.1 – 2026-09-16 · Pilot preparation
 
 - Signed pilot images delivered through UPS, bound to explicit CM4 serials and an expiry date.
