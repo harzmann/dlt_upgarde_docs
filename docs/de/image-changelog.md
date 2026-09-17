@@ -4,7 +4,10 @@ Diese Historie umfasst frühere Migrationsimages und das bereinigte Profil für 
 
 ## 10.0.0-rc.4-upgrade.1-clean-update – 2026-09-17
 
-Neue Pilot-Bauvorschrift mit dauerhaftem BUSY-Status und separater Wartungsanzeige ab dem sitzungsgeprüften Start. Unterstützt deutsche/englische Phasen; Geschäftsdienste bleiben bis zur Abschlussprüfung gesperrt. Das neue Image wird isoliert gebaut und geprüft; reale CM4-/Displayabnahme bleibt offen. Vorherige Images bleiben unverändert.
+- Dauerhafter BUSY-Status und separate Wartungsanzeige ab dem sitzungsgeprüften Start. Deutsche/englische Phasen; Geschäftsdienste bleiben bis zur Abschlussprüfung gesperrt. Benötigt Upgrade-Testausgabe 0.2.7 oder neuer.
+- Image gebaut: 993.321.032 Bytes komprimiert, 4.647.288.832 Bytes roh. ARM64-Anwendungen, Bootdateien, Partitionen, FAT/ext4, vollständige Dekompression und Prüfsummenvergleich bestanden. Wartungsanzeige zusätzlich unter Linux bei 480 × 320 Pixeln geprüft.
+- SHA256 der komprimierten Datei: `dbd63f07cadd6de650a3478fc1983032a89be46d70552489d880a2e5448ef806`.
+- Reale CM4-/Displayabnahme bleibt offen. Frühere Images bleiben unverändert; keine allgemeine Kundenfreigabe.
 
 ## Upgrade-Helfer 0.2.3 – 2026-09-16
 

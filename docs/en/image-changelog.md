@@ -4,7 +4,10 @@ This history includes earlier migration images as well as the clean profile used
 
 ## 10.0.0-rc.4-upgrade.1-clean-update – 2026-09-17
 
-New pilot recipe with persistent BUSY status and a separate maintenance display from session-verified startup. German/English stages; business services remain inhibited until final checks. The image is built and checked in isolation; physical CM4/display acceptance remains pending. Previous images remain unchanged.
+- Persistent BUSY status and a separate maintenance display from session-verified startup. German/English stages; business services remain inhibited until final checks. Requires Upgrade test build 0.2.7 or later.
+- Image built: 993,321,032 bytes compressed, 4,647,288,832 bytes raw. ARM64 applications, boot files, partitions, FAT/ext4, complete decompression and checksum comparisons passed. Maintenance display also tested under Linux at 480 × 320 pixels.
+- Compressed-file SHA256: `dbd63f07cadd6de650a3478fc1983032a89be46d70552489d880a2e5448ef806`.
+- Physical CM4/display acceptance remains pending. Previous images remain unchanged; no general customer approval.
 
 ## Upgrade helper 0.2.3 – 2026-09-16
 
