@@ -2,7 +2,7 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
-This guide covers **test build 0.2.7**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+This guide covers **test build 0.2.8**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
 
 ## Before you start
 
@@ -114,4 +114,6 @@ From **Check device**, the device shows **BUSY** and the current stage. Remove c
 
 Smartcard, USB, RFID, upload and ordinary idle remain inhibited. A dedicated display service reads the seven-line `display.log` without processing business data. Losing the PC connection does not release processing. On the source, use **Release the old device and back up again**; the target requires restoration and final checks before release.
 
-No operating system is running for the display while powered off or in USB programming mode. Follow the PC wizard then. The new pilot image shows BUSY from normal maintenance startup; older images show it after verified SSH reconnection. This view was tested at 480 × 320 pixels; physical display/boot acceptance remains pending.
+No operating system is running for the display while powered off or in USB programming mode. Follow the PC wizard then. The new pilot image shows BUSY from normal maintenance startup; older images show it after verified SSH reconnection. Since 0.2.8 the original system opens the fullscreen overlay before Chrome stops. It also covers floating keyboard icons. The wizard checks that the display is actually visible. File counts and percentages refer to the current operation; database backup and tasks without a known total use an activity bar. After backup the screen says “Continue on the PC”.
+
+The illustration is a rendering test at 37% transfer progress. German and English were checked at 480 × 320 and 1024 × 600. The browser-to-overlay transition was also tested on the original-1.0 device while readers were inhibited, followed by restoration of normal operation. Full device migration acceptance remains pending.

@@ -1,5 +1,13 @@
 # Application changelog
 
+## 0.2.8 – 2026-09-17 · Fullscreen device display and progress
+
+- Dedicated upgrade overlay covers the entire desktop, including floating keyboard icons. On the original system it opens before Chrome stops.
+- Verify a visible fullscreen window; stop with a concrete message if it cannot appear, while business services remain inhibited.
+- Stage display, file counts and actual transferred bytes; activity indication for operations without a measurable total. Progress messages are session-bound and throttled; a lost message does not invalidate transferred data.
+- German/English rendering checked at 480 × 320 and 1024 × 600. Handoff with Chrome and reader services stopped tested on the original-1.0 CM4, followed by normal-operation restoration. Full flash/restoration acceptance remains pending.
+- Existing UPS image bytes are unchanged; the wizard refreshes the device helper after identity/session verification.
+
 ## 0.2.7 – 2026-09-17 · Upgrade display
 
 - BUSY display with German/English stage messages from device check.

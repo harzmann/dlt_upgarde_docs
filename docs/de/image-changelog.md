@@ -1,5 +1,9 @@
 # DLTNG-Image: Changelog
 
+## Upgrade-Helfer 0.2.8 – 2026-09-17
+
+Vollbildanzeige mit Fortschritt und bestätigter Sichtbarkeit. Auf dem Original-1.0-Gerät geprüft. Bestehende Images und UPS-Freigaben bleiben unverändert; die App stellt den Helfer nach Geräte-/Sitzungsprüfung bereit. Künftige Image-Bauten übernehmen ihn.
+
 Diese Historie umfasst frühere Migrationsimages und das bereinigte Profil für DLTNG Upgrade. Historische Angaben beziehen sich auf das jeweilige Image. Das Windows-Tool hat ein [eigenes Changelog](changelog.md).
 
 ## 10.0.0-rc.4-upgrade.1-clean-update – 2026-09-17

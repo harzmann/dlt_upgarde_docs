@@ -1,5 +1,13 @@
 # Programmänderungen
 
+## 0.2.8 – 2026-09-17 · Vollbild und Fortschritt auf dem Gerät
+
+- Eigenständiger Upgrade-Bildschirm über dem gesamten Desktop, einschließlich schwebender Tastatursymbole. Auf dem Originalsystem wird die Anzeige vor dem Beenden von Chrome geöffnet.
+- Sichtbaren Vollbildstart prüfen; bei fehlender Anzeige die Aktion mit konkretem Hinweis anhalten und die Geschäftsdienste gesperrt lassen.
+- Schrittanzeige, Dateizähler und tatsächlich übertragene Bytes; Aktivitätsanzeige für Vorgänge ohne messbare Gesamtmenge. Fortschrittsmeldungen sind sitzungsgebunden und begrenzt, Übertragungsdaten bleiben bei Ausfall einer Meldung erhalten.
+- Deutscher/englischer Bildschirm bei 480 × 320 und 1024 × 600 geprüft. Wechsel bei angehaltenem Chrome und gesperrten Lesediensten auf dem Original-1.0-CM4 geprüft, anschließend Normalbetrieb wiederhergestellt. Vollständiger Flash-/Wiederherstellungstest bleibt offen.
+- Vorhandenes UPS-Image bleibt unverändert; der Assistent aktualisiert den Gerätehelfer nach Identitäts-/Sitzungsprüfung.
+
 ## 0.2.7 – 2026-09-17 · Wartungsanzeige
 
 - Display mit BUSY und deutschen/englischen Phasentexten ab Geräteprüfung.

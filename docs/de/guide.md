@@ -2,7 +2,7 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
-Diese Anleitung berücksichtigt die **Testausgabe 0.2.7**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+Diese Anleitung berücksichtigt die **Testausgabe 0.2.8**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
 
 ## Vor dem Start
 
@@ -114,4 +114,10 @@ Ab **Gerät prüfen** zeigt das Gerät **BUSY** und den aktuellen Schritt. Vorhe
 
 Smartcard, USB, RFID, Upload und der normale Idle-Dienst bleiben gesperrt. Ein eigener Anzeigedienst liest die siebenzeilige `display.log`, ohne Geschäftsdaten zu verarbeiten. Ein Verbindungsverlust gibt die Verarbeitung nicht frei. Am Quellgerät können Sie **Altgerät wieder freigeben und neu sichern** wählen; am Zielgerät ist die vollständige Wiederherstellung mit Abschlussprüfung erforderlich.
 
-Während Ausschalten und USB-Programmiermodus läuft kein Betriebssystem für die Geräteanzeige. In dieser Zeit gelten die Hinweise des PC-Assistenten. Das neue Pilotimage zeigt BUSY ab dem normalen Wartungsstart; bei älteren Images beginnt die Anzeige nach der geprüften SSH-Wiederverbindung. Die Abbildung wurde bei 480 × 320 Pixeln geprüft; der reale Display-/Boot-Test steht noch aus.
+Während Ausschalten und USB-Programmiermodus läuft kein Betriebssystem für die Geräteanzeige. In dieser Zeit gelten die Hinweise des PC-Assistenten. Das neue Pilotimage zeigt BUSY ab dem normalen Wartungsstart; bei älteren Images beginnt die Anzeige nach der geprüften SSH-Wiederverbindung. Ab 0.2.8 wird das Vollbild auf dem Originalsystem vor dem Beenden von Chrome geöffnet. Es verdeckt auch die schwebenden Tastatursymbole. Der Assistent prüft, ob die Anzeige tatsächlich sichtbar ist. Dateizähler und Prozentwerte zeigen den Fortschritt des aktuellen Teilschritts; bei Datenbanksicherung und anderen Aufgaben ohne bekannte Gesamtmenge bewegt sich ein Aktivitätsbalken. Nach der Sicherung steht dort „Am PC fortfahren“.
+
+Die Abbildung ist ein Darstellungstest mit 37 % Übertragungsfortschritt. Deutsch und Englisch wurden bei 480 × 320 und 1024 × 600 geprüft. Der Wechsel vom Browser zur Vollbildanzeige wurde auch auf dem Original-1.0-Testgerät bei gesperrten Lesediensten geprüft; anschließend wurde der Normalbetrieb wiederhergestellt. Die vollständige Geräte-Migration bleibt offen.
+
+![Anzeige auf dem Original-1.0-Testgerät](assets/display-cm4.png)
+
+*Gerätetest während der Vorbereitung, 1024 × 600 Pixel.*

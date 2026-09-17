@@ -1,5 +1,9 @@
 # DLTNG image changelog
 
+## Upgrade helper 0.2.8 – 2026-09-17
+
+Fullscreen overlay with progress and verified visibility. Tested on the original-1.0 device. Published images and UPS approvals remain unchanged; the app refreshes the helper after device/session verification. Future image builds will include it.
+
 This history includes earlier migration images as well as the clean profile used by DLTNG Upgrade. Statements in historical entries refer to the respective image. The Windows application has its [own changelog](changelog.md).
 
 ## 10.0.0-rc.4-upgrade.1-clean-update – 2026-09-17
