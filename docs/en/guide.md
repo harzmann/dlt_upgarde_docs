@@ -2,7 +2,7 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
-This guide covers **test build 0.2.8**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+This guide covers **test build 0.2.9**, including explicit button guidance, the blinking warning, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
 
 ## Before you start
 
@@ -50,7 +50,7 @@ Known configuration, data files, local databases, transfer records and device id
 
 ## 6 · Prepare USB
 
-Select **“Shut down device”**, wait until the display is completely off, then unplug power. Unplugging power is not a substitute for controlled shutdown. Then follow the **approved instructions for the actual carrier board** for its boot button and programming cable. Select **“Detect USB device”** afterwards.
+Select **“Shut down device”**, wait until the display is completely off, then unplug power. Unplugging power is not a substitute for controlled shutdown. Then follow the **approved instructions for the actual carrier board** for its boot button and programming cable. **After reconnecting power, click “Detect USB device” at the bottom right.** Wait until the wizard automatically proceeds to confirmation.
 
 ### Identify the connectors
 
@@ -88,6 +88,14 @@ Without the checkmark, the button stays grey and the status asks for confirmatio
 **“Write system now”** starts the operation. If selected, the complete device backup is created and verified first; writing and read-back follow. The current phase is shown as text, with percentages for measurable file operations. Keep power and USB connected. The application reads back the entire written region and compares it with the image. Normal cancellation is unavailable during this operation.
 
 If interrupted, use [guided recovery](troubleshooting.md). Retrying never overwrites an existing original complete device backup.
+
+### Red warning in the PC wizard
+
+From test build 0.2.9, a large red **“UPGRADE IN PROGRESS - DO NOT POWER OFF!”** warning blinks at the top during upgrade operations. It stays visible while scrolling and remains active if write status is uncertain. Keep the device, PC and cables connected and use the displayed recovery action.
+
+The warning is hidden for explicitly guided cable changes and restart after verified writing. Follow those manual steps only when prompted. After each completed operation, the status names the next button to click.
+
+![Warning in demo mode, test build 0.2.9](assets/upgrade-warning-en.png)
 
 ## 9 · Restore data
 

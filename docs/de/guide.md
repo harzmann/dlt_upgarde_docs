@@ -2,7 +2,7 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
-Diese Anleitung berücksichtigt die **Testausgabe 0.2.8**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+Diese Anleitung berücksichtigt die **Testausgabe 0.2.9**, einschließlich eindeutiger Klickanweisungen, blinkender Warnanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
 
 ## Vor dem Start
 
@@ -50,7 +50,7 @@ Gesichert werden die bekannten Konfigurationen, Nutzdateien, lokalen Datenbanken
 
 ## 6 · USB vorbereiten
 
-**„Gerät herunterfahren“** wählen und warten, bis das Display vollständig aus ist. Erst danach das Stromkabel abziehen. Das Ausstecken ersetzt kein geregeltes Herunterfahren. Anschließend die **freigegebene Anleitung für die tatsächliche Trägerplatine** zum Boot-Taster und Programmierkabel befolgen. Danach **„USB-Gerät erkennen“** wählen.
+**„Gerät herunterfahren“** wählen und warten, bis das Display vollständig aus ist. Erst danach das Stromkabel abziehen. Das Ausstecken ersetzt kein geregeltes Herunterfahren. Anschließend die **freigegebene Anleitung für die tatsächliche Trägerplatine** zum Boot-Taster und Programmierkabel befolgen. **Nachdem der Strom wieder angeschlossen ist, unten rechts auf „USB-Gerät erkennen“ klicken.** Warten, bis der Assistent automatisch zur Bestätigung weitergeht.
 
 ### Die Anschlüsse erkennen
 
@@ -88,6 +88,14 @@ Fehlt das Häkchen, bleibt die Schaltfläche grau und der Status fordert zur Bes
 **„System jetzt schreiben“** startet den Vorgang. Eine ausgewählte vollständige Gerätesicherung wird zuerst erstellt und geprüft; danach folgen Schreiben und Rücklesen. Die jeweilige Phase wird als Text angezeigt, bei messbaren Dateioperationen zusätzlich mit Prozentangabe. Stromversorgung und USB-Verbindung bestehen lassen. Das Programm liest den gesamten geschriebenen Bereich zurück und vergleicht ihn mit dem Image. Währenddessen ist kein normaler Abbruch vorgesehen.
 
 Bei Unterbrechung den [geführten Wiederanlauf](troubleshooting.md) verwenden. Eine ursprüngliche vollständige Gerätesicherung wird bei Wiederholung nicht überschrieben.
+
+### Rote Warnanzeige im PC-Assistenten
+
+Ab Testausgabe 0.2.9 blinkt während laufender Upgrade-Arbeiten oben groß **„UPGRADE-VORGANG LÄUFT - NICHT AUSSCHALTEN!“**. Die Warnung bleibt beim Scrollen sichtbar und auch dann aktiv, wenn der Schreibstatus unklar ist. Gerät, PC und Kabel angeschlossen lassen und die angezeigte Wiederaufnahme verwenden.
+
+Für die ausdrücklich angeleiteten Pausen zum Umstecken und Neustarten nach geprüftem Schreiben wird sie ausgeblendet. Ausschließlich dann den jeweiligen Handgriffen folgen. Nach jedem abgeschlossenen Teilschritt nennt der Status die nächste zu drückende Schaltfläche.
+
+![Warnanzeige im Demomodus, Testausgabe 0.2.9](assets/upgrade-warning-de.png)
 
 ## 9 · Daten wiederherstellen
 

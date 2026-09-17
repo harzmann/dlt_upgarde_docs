@@ -1,5 +1,12 @@
 # Application changelog
 
+## 0.2.9 – 2026-09-17 · Explicit button guidance and warning
+
+- Step 06 explicitly names “Detect USB device” after reconnecting power. Every step names the next button; running actions display appropriate waiting instructions.
+- Large blinking red “UPGRADE IN PROGRESS - DO NOT POWER OFF!” warning outside the scrollable content, including uncertain write status and session recovery.
+- Hide the warning for guided cable changes and restart after verified writing. German and English guidance survives a language switch.
+- Demo workflow, recovery, rollback restart and rendering at 800 × 450 and 1180 × 820 with 100/200% scaling checked. No physical device flashed; existing UPS image unchanged.
+
 ## 0.2.8 – 2026-09-17 · Fullscreen device display and progress
 
 - Dedicated upgrade overlay covers the entire desktop, including floating keyboard icons. On the original system it opens before Chrome stops.

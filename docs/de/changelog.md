@@ -1,5 +1,12 @@
 # Programmänderungen
 
+## 0.2.9 – 2026-09-17 · Klare Klickanweisungen und Warnanzeige
+
+- Schritt 06 nennt nach dem Wiederanschließen des Stroms ausdrücklich „USB-Gerät erkennen“. Alle Schritte nennen die nächste Schaltfläche; laufende Aktionen zeigen passende Wartehinweise.
+- Große rot blinkende Warnung „UPGRADE-VORGANG LÄUFT - NICHT AUSSCHALTEN!“ außerhalb des scrollbaren Inhalts, auch bei unklarem Schreibstatus und Wiederaufnahme.
+- Für die angeleiteten Pausen zum Umstecken und Neustarten nach geprüftem Schreiben wird die Warnung ausgeblendet. Deutsche und englische Hinweise bleiben beim Sprachwechsel erhalten.
+- Demodurchlauf, Wiederaufnahme, Rückfall-Neustart und Darstellung bei 800 × 450 sowie 1180 × 820 mit 100/200 % Skalierung geprüft. Kein Gerät geflasht; vorhandenes UPS-Image unverändert.
+
 ## 0.2.8 – 2026-09-17 · Vollbild und Fortschritt auf dem Gerät
 
 - Eigenständiger Upgrade-Bildschirm über dem gesamten Desktop, einschließlich schwebender Tastatursymbole. Auf dem Originalsystem wird die Anzeige vor dem Beenden von Chrome geöffnet.
