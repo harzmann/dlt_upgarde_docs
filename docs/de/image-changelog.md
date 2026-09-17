@@ -2,6 +2,10 @@
 
 Diese Historie umfasst frühere Migrationsimages und das bereinigte Profil für DLTNG Upgrade. Historische Angaben beziehen sich auf das jeweilige Image. Das Windows-Tool hat ein [eigenes Changelog](changelog.md).
 
+## 10.0.0-rc.4-upgrade.1-clean-update – 2026-09-17
+
+Neue Pilot-Bauvorschrift mit dauerhaftem BUSY-Status und separater Wartungsanzeige ab dem sitzungsgeprüften Start. Unterstützt deutsche/englische Phasen; Geschäftsdienste bleiben bis zur Abschlussprüfung gesperrt. Das neue Image wird isoliert gebaut und geprüft; reale CM4-/Displayabnahme bleibt offen. Vorherige Images bleiben unverändert.
+
 ## Upgrade-Helfer 0.2.3 – 2026-09-16
 
 Ältere NFC-Build- und uWSGI-Protokolle werden als Archiv gesichert und wiederhergestellt. Vorhandene Image-Dateien und UPS-Freigaben bleiben unverändert. Die App stellt den neuen Helfer nach Geräte-/Sitzungsprüfung bereit.

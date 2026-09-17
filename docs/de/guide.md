@@ -2,14 +2,14 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
-Diese Anleitung berücksichtigt die **Testausgabe 0.2.6**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+Diese Anleitung berücksichtigt die **Testausgabe 0.2.7**, einschließlich der neuen Bestätigungsanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
 
 ## Vor dem Start
 
 - Windows 11 x64 verwenden; ein Gerät pro Vorgang.
 - Netzteil, Ethernet-Kabel und das zur DLTNG-Trägerplatine passende USB-Programmierkabel bereithalten.
 - Einen lokalen Arbeitsordner mit genügend Platz wählen. Zusätzlich zur Datensicherung benötigen Image und optionale vollständige Gerätesicherung mehrere Gigabyte; die vollständige Kopie allein umfasst etwa 16–32 GB.
-- Internet für den Image-Download bereithalten. Das Image wird vor dem Anhalten des Geräts vollständig heruntergeladen und geprüft.
+- Internet für den Image-Download bereithalten. Das Image wird vor der Datensicherung vollständig heruntergeladen und geprüft. Die Geschäftsdienste werden ab der Geräteprüfung gesperrt.
 - Für USB-Treiber sowie Datenträger- und Netzwerkeinstellungen können Windows-Administratorrechte erforderlich sein.
 
 ## Sprache wählen
@@ -105,3 +105,13 @@ Den Sicherungsordner aufbewahren. Er enthält Sicherung, Sitzungszustand und Pro
 
 
 **Zurück** zeigt bereits erledigte Schritte zur Ansicht. **Weiter** führt vorwärts, ohne Aktionen zu wiederholen. Diagnosepakete und Wiederaufnahme laufender Schreibvorgänge sind in der [Fehlerhilfe](troubleshooting.md) beschrieben.
+
+## Anzeige am DLTNG während des Upgrades
+
+Ab **Gerät prüfen** zeigt das Gerät **BUSY** und den aktuellen Schritt. Vorher Karten und USB-Datenträger entfernen und laufende Vorgänge beenden lassen. Die Anzeige übernimmt die Sprache der zuletzt gestarteten Geräteaktion.
+
+![Wartungsanzeige bei der Datensicherung](assets/display-de.png)
+
+Smartcard, USB, RFID, Upload und der normale Idle-Dienst bleiben gesperrt. Ein eigener Anzeigedienst liest die siebenzeilige `display.log`, ohne Geschäftsdaten zu verarbeiten. Ein Verbindungsverlust gibt die Verarbeitung nicht frei. Am Quellgerät können Sie **Altgerät wieder freigeben und neu sichern** wählen; am Zielgerät ist die vollständige Wiederherstellung mit Abschlussprüfung erforderlich.
+
+Während Ausschalten und USB-Programmiermodus läuft kein Betriebssystem für die Geräteanzeige. In dieser Zeit gelten die Hinweise des PC-Assistenten. Das neue Pilotimage zeigt BUSY ab dem normalen Wartungsstart; bei älteren Images beginnt die Anzeige nach der geprüften SSH-Wiederverbindung. Die Abbildung wurde bei 480 × 320 Pixeln geprüft; der reale Display-/Boot-Test steht noch aus.

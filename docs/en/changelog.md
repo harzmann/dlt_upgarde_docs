@@ -1,5 +1,12 @@
 # Application changelog
 
+## 0.2.7 – 2026-09-17 · Upgrade display
+
+- BUSY display with German/English stage messages from device check.
+- Dedicated maintenance display; Smartcard, USB, RFID, upload and ordinary idle remain inhibited until release.
+- Holds survive PC crashes and connection loss. Explicit source release is available even before downloading an image.
+- The new pilot image shows the notice from maintenance startup. Physical device acceptance remains pending.
+
 ### 0.2.6 – 2026-09-16 · Resume and diagnostics
 
 - Tolerate transient Windows progress-file locks; telemetry failures do not interrupt disk writes.

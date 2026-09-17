@@ -2,6 +2,10 @@
 
 This history includes earlier migration images as well as the clean profile used by DLTNG Upgrade. Statements in historical entries refer to the respective image. The Windows application has its [own changelog](changelog.md).
 
+## 10.0.0-rc.4-upgrade.1-clean-update – 2026-09-17
+
+New pilot recipe with persistent BUSY status and a separate maintenance display from session-verified startup. German/English stages; business services remain inhibited until final checks. The image is built and checked in isolation; physical CM4/display acceptance remains pending. Previous images remain unchanged.
+
 ## Upgrade helper 0.2.3 – 2026-09-16
 
 Legacy NFC build and uWSGI logs are archived and restored. Existing image files and UPS approvals remain unchanged. The app installs the revised helper after device/session verification.

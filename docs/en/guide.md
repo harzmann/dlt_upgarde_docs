@@ -2,14 +2,14 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
-This guide covers **test build 0.2.6**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+This guide covers **test build 0.2.7**, including the new confirmation display, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
 
 ## Before you start
 
 - Use Windows 11 x64; connect one device per operation.
 - Have the power supply, Ethernet cable and USB programming cable suitable for the DLTNG carrier board ready.
 - Choose a local work folder with sufficient space. The image and optional complete device backup need several gigabytes in addition to the data backup; the complete copy alone is about 16–32 GB.
-- Keep Internet access available for the image download. The complete image is downloaded and checked before the device is paused.
+- Keep Internet access available for the image download. The complete image is downloaded and checked before backup. Business services pause when the device is checked.
 - USB drivers and disk/network settings may require Windows administrator privileges.
 
 ## Choose your language
@@ -105,3 +105,13 @@ Use **“Open session”** to select `session.json` in the previous work folder.
 
 
 **Back** reviews completed steps. **Next** moves forward without repeating operations. See [Troubleshooting](troubleshooting.md) for diagnostic packages and resuming write monitoring.
+
+## DLTNG display during the upgrade
+
+From **Check device**, the device shows **BUSY** and the current stage. Remove cards and USB storage and let current work finish first. The display uses the language of the most recent device action.
+
+![Maintenance display during backup](assets/display-en.png)
+
+Smartcard, USB, RFID, upload and ordinary idle remain inhibited. A dedicated display service reads the seven-line `display.log` without processing business data. Losing the PC connection does not release processing. On the source, use **Release the old device and back up again**; the target requires restoration and final checks before release.
+
+No operating system is running for the display while powered off or in USB programming mode. Follow the PC wizard then. The new pilot image shows BUSY from normal maintenance startup; older images show it after verified SSH reconnection. This view was tested at 480 × 320 pixels; physical display/boot acceptance remains pending.

@@ -1,5 +1,12 @@
 # Programmänderungen
 
+## 0.2.7 – 2026-09-17 · Wartungsanzeige
+
+- Display mit BUSY und deutschen/englischen Phasentexten ab Geräteprüfung.
+- Eigene Wartungsanzeige; Smartcard, USB, RFID, Upload und normaler Idle-Dienst bleiben bis zur Freigabe gesperrt.
+- Sperre bleibt bei PC-Absturz und Verbindungsverlust erhalten. Quellgerät bereits vor dem Download ausdrücklich wieder freigeben können.
+- Neues Pilotimage zeigt die Meldung ab Wartungsstart. Die physische Geräteabnahme steht noch aus.
+
 ### 0.2.6 – 2026-09-16 · Wiederaufnahme und Diagnose
 
 - Windows-Fortschrittsaustausch gegen kurzzeitige Dateisperren absichern; Anzeigeausfälle unterbrechen keinen Schreibvorgang.
