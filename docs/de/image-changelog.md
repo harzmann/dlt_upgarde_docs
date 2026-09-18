@@ -1,5 +1,12 @@
 # DLTNG-Image: Changelog
 
+## Noch nicht veröffentlicht – 2026-09-18: Start und Wiederverbindung
+
+- Startfehler im bisherigen Pilotimage erkannt und im Image-Bau korrigiert: Die lokale Startkonsole muss auch bei ausgeschalteter serieller Schnittstelle erhalten bleiben. Andernfalls kann das Gerät vor der Anzeige und dem Netzwerkstart hängen bleiben.
+- Die Korrektur wurde am 32-GB-Testgerät mit zwei Neustarts, regulärer Wartungsanzeige, Netzwerk und Sitzungsprüfung bestätigt. Die ursprünglichen Kernel- und Startdateien werden weiter verwendet; temporäre Diagnosezusätze wurden entfernt.
+- Das Service-Netzwerkprofil erhält künftig gleichzeitig DHCP für das Firmennetz und die feste Serviceadresse für das Direktkabel. Die App versucht beim Wiederverbinden auch die zuvor bekannte LAN-Adresse.
+- **Noch kein neues Image oder neue EXE veröffentlicht.** Bestehende Download-Dateien enthalten diese Änderungen noch nicht. Erststart eines neu gebauten Images, vollständige Datenwiederherstellung und die 16-GB-Variante sind noch zu prüfen. Hinweise zu Schritt 09 stehen in der [Fehlerhilfe](troubleshooting.md).
+
 ## Upgrade-Helfer 0.2.8 – 2026-09-17
 
 Vollbildanzeige mit Fortschritt und bestätigter Sichtbarkeit. Auf dem Original-1.0-Gerät geprüft. Bestehende Images und UPS-Freigaben bleiben unverändert; die App stellt den Helfer nach Geräte-/Sitzungsprüfung bereit. Künftige Image-Bauten übernehmen ihn.

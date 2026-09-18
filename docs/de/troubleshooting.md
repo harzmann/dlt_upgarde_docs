@@ -12,13 +12,13 @@ Die Fehlermeldung nennt das Problem und einen nächsten Schritt. Sicherungen und
 | Unbekannte Daten oder Datenbanken | Datenprofil beziehungsweise Migrationsregel prüfen lassen, bevor geflasht wird. |
 | USB-Gerät fehlt oder ist mehrdeutig | Freigegebene Geräteanleitung, Boot-Taster, Programmierkabel und Treiber prüfen; nur das beabsichtigte Gerät anschließen. |
 | Laufwerk wird verwendet | Explorer-Fenster oder andere Programme schließen, die auf das DLTNG-Laufwerk zugreifen. |
-| Netzwerk nach Neustart nicht erreichbar | Start abwarten, Strom und LAN prüfen; den vorgesehenen Servicezugang verwenden. |
+| Netzwerk nach Neustart nicht erreichbar (NET-003) | Start abwarten, Strom und LAN prüfen. Im Firmennetz die aktuelle Geräteadresse eingeben; siehe Hinweise zu Schritt 09 unten. |
 
 ## Korrekturen für den aktuellen Test
 
-**Testausgabe 0.2.6 verwenden.** Sie behebt Zugriffsfehler beim Austausch des Windows-Fortschritts und kann laufende oder bereits erfolgreich abgeschlossene Systemhelfer wieder aufnehmen. Die Oberfläche zeigt erledigte Schritte über **Zurück** an, ohne sie erneut auszuführen. Die kompakte Ansicht hält die Hauptaktion sichtbar; der Bildhinweis entfällt. **Diagnose** erklärt die Fehlercodes, exportiert ein bereinigtes ZIP und bietet nach Bestätigung den Versand an UPS an.
+**Die für Ihren Test bereitgestellte Pilotversion verwenden.** Seit 0.2.6 sind Zugriffsfehler beim Austausch des Windows-Fortschritts behoben; laufende oder bereits erfolgreich abgeschlossene Systemhelfer können wieder aufgenommen werden. Die Oberfläche zeigt erledigte Schritte über **Zurück** an, ohne sie erneut auszuführen. Die kompakte Ansicht hält die Hauptaktion sichtbar; der Bildhinweis entfällt. **Diagnose** erklärt die Fehlercodes, exportiert ein bereinigtes ZIP und bietet nach Bestätigung den Versand an UPS an.
 
-Lassen Sie das Gerät angeschlossen, solange ein Systemhelfer arbeitet. Nach dessen Abschluss die alte EXE schließen, 0.2.6 starten und **„Vorgang öffnen“** wählen. Die aktuelle `session.json` verwenden. Bei mehreren Vorgängen helfen Datum, Fortschritt und Ordner bei der Auswahl; der neueste steht oben. Bereits geprüfter Download und Sicherung bleiben erhalten. Ein erfolgreicher Schreibnachweis führt direkt zur Datenwiederherstellung. Falls das Altgerät nach der Sicherung wieder normal betrieben wurde, ist dagegen eine neue Sicherung erforderlich.
+Lassen Sie das Gerät angeschlossen, solange ein Systemhelfer arbeitet. Falls ein Versionswechsel erforderlich ist, erst nach dessen Abschluss die alte EXE schließen, die bereitgestellte Pilotversion starten und **„Vorgang öffnen“** wählen. Die aktuelle `session.json` verwenden. Bei mehreren Vorgängen helfen Datum, Fortschritt und Ordner bei der Auswahl; der neueste steht oben. Bereits geprüfter Download und Sicherung bleiben erhalten. Ein erfolgreicher Schreibnachweis führt direkt zur Datenwiederherstellung. Falls das Altgerät nach der Sicherung wieder normal betrieben wurde, ist dagegen eine neue Sicherung erforderlich.
 
 Im vorhandenen LAN genügt die normale Geräteverbindung. Die direkte Serviceverbindung ist für ein eigenes Ethernet-Kabel zwischen PC und DLTNG vorgesehen. Administratorrechte fordert die App bei der jeweiligen Windows-Aktion an.
 
@@ -34,6 +34,15 @@ Keine unvollständige Datei als gültige Sicherung verwenden. Die Sitzung öffne
 ## Schreiben unterbrochen
 
 Arbeitsordner behalten und zuerst **Schreibstatus wieder aufnehmen**. Eine Fehlermeldung der Oberfläche bedeutet nicht zwingend, dass der Systemhelfer angehalten wurde. Während er arbeitet, Strom/USB angeschlossen lassen und keinen zweiten Versuch starten. Ein gespeicherter Erfolg führt zur Wiederherstellung ohne erneutes Schreiben. Erst bei tatsächlich fehlgeschlagenem/beendetem Helfer dem Wiederanlauf folgen, das USB-Gerät neu erkennen und das gesamte Image erneut schreiben und prüfen lassen.
+
+## Schritt 09: Gerät nach Neustart nicht gefunden (NET-003)
+
+1. Den bisherigen Vorgang und den Sicherungsordner behalten. Eine fehlende Netzwerkverbindung allein erfordert kein erneutes Schreiben des Systems.
+2. USB-Admin entfernen, Admin-Taster freigeben und das Gerät entsprechend der Anleitung normal starten.
+3. Im **Firmennetz / am Switch** die aktuelle, bestätigte IP-Adresse des DLTNG im Adressfeld eingeben und **Daten wiederherstellen** drücken. Nach dem Neuinstallieren kann DHCP eine andere Adresse vergeben.
+4. **Direkte Serviceverbindung einrichten** nur verwenden, wenn das DLTNG mit einem eigenen Netzwerkkabel direkt an diesem PC angeschlossen ist. Diese Funktion ist nicht für den gemeinsamen Firmenanschluss vorgesehen.
+
+Bleiben Display und Netzwerk im bisherigen Pilotimage vollständig aus, kann der inzwischen erkannte Startkonfigurationsfehler vorliegen. Das muss über die Diagnose geprüft werden; NET-003 allein beweist diese Ursache nicht. Den Sicherungsordner behalten und den Support zur gezielten Startkorrektur hinzuziehen. Der Fix ist am 32-GB-Testgerät geprüft, aber noch nicht als neues vollständiges Image veröffentlicht; siehe [Image-Changelog](image-changelog.md).
 
 ## Wiederherstellung unterbrochen
 

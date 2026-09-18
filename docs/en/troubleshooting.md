@@ -12,13 +12,13 @@ Error messages describe the problem and the next action. Backups and session sta
 | Unknown data or databases | Have the data profile or migration rule checked before flashing. |
 | USB device missing or ambiguous | Check the approved device instructions, boot button, programming cable and driver; connect only the intended device. |
 | Drive is in use | Close File Explorer or other programs accessing the DLTNG drive. |
-| Network unavailable after restart | Wait for startup, check power and Ethernet, and use the intended service connection. |
+| Network unavailable after restart (NET-003) | Wait for startup and check power and Ethernet. On a company LAN, enter the current device address; see step 09 below. |
 
 ## Fixes for the current test
 
-**Use test build 0.2.6.** It tolerates Windows progress-file access errors and resumes active or successfully completed helpers. **Back** reviews completed steps without repeating operations. The compact view keeps the primary action visible and removes the picture caption. **Diagnostics** explains error codes, exports a redacted ZIP and offers user-confirmed upload to UPS.
+**Use the pilot build provided for your test.** Since 0.2.6, Windows progress-file access errors are handled and active or successfully completed helpers can resume. **Back** reviews completed steps without repeating operations. The compact view keeps the primary action visible and removes the picture caption. **Diagnostics** explains error codes, exports a redacted ZIP and offers user-confirmed upload to UPS.
 
-Keep the device connected while a helper is working. After it finishes, close the old EXE, start 0.2.6 and choose **“Open session”** with the current `session.json`. If multiple sessions exist, choose using their date, progress and folder; newest is listed first. Verified downloads and backups are retained. A successful saved write result leads directly to data restoration. If the original device resumed normal operation after backup, a fresh backup is required.
+Keep the device connected while a helper is working. If a version change is required, wait for the helper to finish before closing the old EXE, starting the provided pilot build and choosing **“Open session”** with the current `session.json`. If multiple sessions exist, choose using their date, progress and folder; newest is listed first. Verified downloads and backups are retained. A successful saved write result leads directly to data restoration. If the original device resumed normal operation after backup, a fresh backup is required.
 
 On an existing LAN, use the normal device connection. The direct service connection is intended for a dedicated Ethernet cable between the PC and DLTNG. The app requests administrator rights for the relevant Windows operation.
 
@@ -34,6 +34,15 @@ Never treat an incomplete file as a valid backup. Open the session and follow th
 ## Interrupted writing
 
 Keep the work folder and first choose **Resume write monitoring**. A UI error does not necessarily mean the helper stopped. While it is running, keep power/USB connected and do not start another attempt. A saved success leads to restoration without writing again. Only after an actual helper failure/exit should you follow recovery, rediscover USB and write and verify the entire image again.
+
+## Step 09: Device not found after restart (NET-003)
+
+1. Keep the existing session and backup folder. A missing network connection alone does not require writing the system again.
+2. Remove USB Admin, release the Admin button and start the device normally as described in the guide.
+3. On a **company LAN / switch**, enter the DLTNG's confirmed current IP address and click **Restore data**. DHCP may assign a different address after reinstallation.
+4. Use **Set up direct service connection** only when a dedicated Ethernet cable connects the DLTNG directly to this PC. This function is not intended for the shared company connection.
+
+If both display and network remain unavailable in the earlier pilot image, the newly identified startup configuration fault may be responsible. Diagnosis is required; NET-003 alone does not prove this cause. Keep the backup folder and contact support for a targeted startup correction. The fix has been tested on the 32-GB device but has not yet been released in a new complete image; see the [image changelog](image-changelog.md).
 
 ## Interrupted restoration
 

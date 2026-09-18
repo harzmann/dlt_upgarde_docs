@@ -1,5 +1,12 @@
 # DLTNG image changelog
 
+## Unreleased – 2026-09-18: Startup and reconnection
+
+- Identified and corrected a startup fault in the image recipe: a local boot console must remain available when the serial interface is disabled. Without it, the device can stop before the display and network start.
+- Two physical reboots on the 32-GB test device verified the fix, regular maintenance display, network and session proof. The original kernel and startup files remain in use; temporary diagnostics were removed.
+- The service network profile will retain both DHCP for the company LAN and the static service address for a direct cable. The app also tries the previously known LAN address when reconnecting.
+- **No new image or EXE has been published.** Existing downloads do not yet contain these changes. First boot of a rebuilt image, complete data restoration and the 16-GB variant still require validation. See [troubleshooting](troubleshooting.md) for step 09.
+
 ## Upgrade helper 0.2.8 – 2026-09-17
 
 Fullscreen overlay with progress and verified visibility. Tested on the original-1.0 device. Published images and UPS approvals remain unchanged; the app refreshes the helper after device/session verification. Future image builds will include it.
