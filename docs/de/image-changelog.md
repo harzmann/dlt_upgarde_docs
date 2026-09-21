@@ -1,5 +1,14 @@
 # DLTNG-Image: Changelog
 
+## 10.0.0-rc.4-upgrade.2-clean-update – 2026-09-21
+
+- Neues vollständiges Pilotimage mit erhaltener lokaler Startkonsole. DHCP im Firmennetz und feste Serviceadresse werden gemeinsam eingerichtet; der Netzwerkstart erfolgt vor der Wartungsanzeige.
+- Neue Geräteanzeige nach abgeschlossenem Download und bei der Vorbereitung der Sicherung. Benötigt Upgrade-App 0.2.10.
+- Dateisysteme, ARM64-Anwendungen, Bootkonsole, vollständige Dekompression und Prüfsummen geprüft. Komprimiert 992.888.644 Bytes; roh 4.647.288.832 Bytes.
+- SHA256 der komprimierten Datei: f69b04015cba117882dc69bc4a4b7431d66163a36aa4abb9f3f7ce4d28db4716.
+- Signierte UPS-Pilotfreigabe für das registrierte 32-GB-Testgerät geprüft, einschließlich Downloadberechtigung und fortsetzbaren Bytebereichen. Die drei älteren Pilotfreigaben mit dem Startfehler wurden zurückgenommen.
+- Die gezielte Start-/Netzwerkkorrektur ist am Testgerät bestätigt. Erststart dieses frisch gebauten Images, vollständige Migration und 16-GB-Abnahme bleiben offen. Keine allgemeine Kundenfreigabe.
+
 ## Noch nicht veröffentlicht – 2026-09-18: Start und Wiederverbindung
 
 - Startfehler im bisherigen Pilotimage erkannt und im Image-Bau korrigiert: Die lokale Startkonsole muss auch bei ausgeschalteter serieller Schnittstelle erhalten bleiben. Andernfalls kann das Gerät vor der Anzeige und dem Netzwerkstart hängen bleiben.

@@ -1,5 +1,13 @@
 # Application changelog
 
+## 0.2.10 – 2026-09-21 · Backup and restart
+
+- Step 05 assumes cards and USB storage have already been removed. BUSY remains active; do not wait for “Ready”.
+- After image verification, the device says “Image verified. Continue on the PC”. Backup preparation has its own stage.
+- Step 09 explains the restart with power disconnected, USB Admin removed, Admin button released and a ten-second wait.
+- Try the known LAN address when reconnecting; verify device/session proof before replacing the helper. Retain DHCP alongside the static service address.
+- 141 Windows tests, compiled self-test and DE/EN rendering at 100/200% passed. New flashing also requires corrected image upgrade.2. A new EXE does not repair an already written old image. Complete migration acceptance remains pending.
+
 ## 0.2.9 – 2026-09-17 · Explicit button guidance and warning
 
 - Step 06 explicitly names “Detect USB device” after reconnecting power. Every step names the next button; running actions display appropriate waiting instructions.

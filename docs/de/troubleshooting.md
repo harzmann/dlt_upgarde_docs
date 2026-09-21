@@ -42,7 +42,7 @@ Arbeitsordner behalten und zuerst **Schreibstatus wieder aufnehmen**. Eine Fehle
 3. Im **Firmennetz / am Switch** die aktuelle, bestätigte IP-Adresse des DLTNG im Adressfeld eingeben und **Daten wiederherstellen** drücken. Nach dem Neuinstallieren kann DHCP eine andere Adresse vergeben.
 4. **Direkte Serviceverbindung einrichten** nur verwenden, wenn das DLTNG mit einem eigenen Netzwerkkabel direkt an diesem PC angeschlossen ist. Diese Funktion ist nicht für den gemeinsamen Firmenanschluss vorgesehen.
 
-Bleiben Display und Netzwerk im bisherigen Pilotimage vollständig aus, kann der inzwischen erkannte Startkonfigurationsfehler vorliegen. Das muss über die Diagnose geprüft werden; NET-003 allein beweist diese Ursache nicht. Den Sicherungsordner behalten und den Support zur gezielten Startkorrektur hinzuziehen. Der Fix ist am 32-GB-Testgerät geprüft, aber noch nicht als neues vollständiges Image veröffentlicht; siehe [Image-Changelog](image-changelog.md).
+Bleiben Display und Netzwerk im bisherigen Pilotimage vollständig aus, kann der inzwischen erkannte Startkonfigurationsfehler vorliegen. Das muss über die Diagnose geprüft werden; NET-003 allein beweist diese Ursache nicht. Den Sicherungsordner behalten und den Support zur gezielten Startkorrektur hinzuziehen. Der Fix ist am 32-GB-Testgerät geprüft und im neuen Pilotimage upgrade.2 enthalten. Für neue Durchläufe App 0.2.10 und dieses Image verwenden. Eine neue EXE allein repariert kein bereits geschriebenes altes Image; siehe [Image-Changelog](image-changelog.md).
 
 ## Wiederherstellung unterbrochen
 

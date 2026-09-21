@@ -2,7 +2,7 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
-Diese Anleitung berücksichtigt die **Testausgabe 0.2.9**, einschließlich eindeutiger Klickanweisungen, blinkender Warnanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+Diese Anleitung berücksichtigt die **Testausgabe 0.2.10**, einschließlich eindeutiger Klickanweisungen, blinkender Warnanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
 
 ## Vor dem Start
 
@@ -26,7 +26,7 @@ Oben rechts auf die **Landesflagge mit Sprachname** klicken und **Deutsch** oder
 
 ## 2 · Gerät verbinden
 
-PC und DLTNG an dasselbe LAN anschließen. Die IP-Adresse des DLTNG eingeben oder **„DLTNG im Netzwerk suchen“** wählen. **„Gerät prüfen“** liest Gerätekennung, Hardware und Version.
+PC und DLTNG an dasselbe LAN anschließen. Die IP-Adresse des DLTNG eingeben oder **„DLTNG im Netzwerk suchen“** wählen. Karten und USB-Datenträger entfernen und laufende Vorgänge beenden lassen. **„Gerät prüfen“** liest Gerätekennung, Hardware und Version und aktiviert anschließend die Upgrade-Anzeige mit BUSY.
 
 Über **„Optionen für direkte Kabelverbindung anzeigen“** die zusätzlichen Einstellungen öffnen. Bei einem direkten Ethernet-Kabel den ausdrücklich dafür verwendeten PC-Adapter auswählen. Bei fester Geräteadresse auch die Netzgröße angeben, beispielsweise `192.168.1.25/24`. Für ein Gerät mit DHCP steht die begrenzte Hilfe **„Direktverbindung: DLTNG ohne feste IP finden“** zur Verfügung. Diese nur auf einer direkten Kabelverbindung ohne Firmennetz oder Switch aktivieren.
 
@@ -42,7 +42,7 @@ Sicherungsordner kontrollieren. Die verpflichtende Datensicherung bleibt immer a
 
 ## 5 · Daten sichern
 
-Karten und USB-Datenträger entfernen und das Ende laufender Vorgänge abwarten. **„Daten sichern“** hält relevante Schreibdienste an, erstellt die Sicherung und überträgt sie auf den PC. Erst eine vollständig geprüfte Sicherung erlaubt den nächsten Schritt.
+Karten und USB-Datenträger sind bereits entfernt und bleiben bis zum Abschluss entfernt. Das Display zeigt weiterhin die Upgrade-Anzeige und **BUSY**; nicht auf **„Bereit“** warten. Nach dem Download erscheint ab 0.2.10 **„Systemdatei geprüft. Am PC fortfahren“**. Jetzt unten rechts **„Daten sichern“** klicken. Der Assistent sichert und überträgt die Daten und wechselt erst nach vollständiger Prüfung automatisch zu Schritt 06.
 
 Gesichert werden die bekannten Konfigurationen, Nutzdateien, lokalen Datenbanken, Übertragungsnachweise und Geräteidentitätsdaten. Unbekannte dauerhafte Datenbestände stoppen den Ablauf zur Klärung. Bei externen Datenbankservern werden die Verbindungseinstellungen übernommen; deren Daten werden nicht zurückgeschrieben.
 
@@ -99,7 +99,14 @@ Für die ausdrücklich angeleiteten Pausen zum Umstecken und Neustarten nach gep
 
 ## 9 · Daten wiederherstellen
 
-Programmierkabel entfernen, Boot-Taster freigeben und DLTNG normal starten. Die angezeigte Zieladresse verwenden beziehungsweise den direkten Servicezugang einrichten. **„Daten wiederherstellen“** verbindet sich mit demselben Gerät, prüft den Sitzungsnachweis und importiert die Sicherung.
+Nach dem vollständig geprüften Schreiben das DLTNG **neu starten**:
+
+1. Stromkabel abziehen.
+2. USB-Programmierkabel vollständig entfernen und Admin-Taster loslassen.
+3. Zehn Sekunden warten, dann Strom wieder anschließen, ohne den Admin-Taster zu drücken. Das Netzwerkkabel bleibt angeschlossen.
+4. Unten rechts **„Daten wiederherstellen“** klicken. Der Assistent wartet auf das Gerät, prüft den Sitzungsnachweis und importiert die Sicherung.
+
+Im Firmennetz die aktuelle Geräteadresse verwenden; ab 0.2.10 wird auch die zuvor bekannte LAN-Adresse versucht. Den direkten Servicezugang nur für ein eigenes Kabel zwischen PC und DLTNG einrichten. Bei dunklem Display oder NET-003 die [Fehlerhilfe](troubleshooting.md) beachten.
 
 ## 10 · Abschluss
 

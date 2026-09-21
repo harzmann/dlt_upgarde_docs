@@ -1,5 +1,10 @@
 # Documentation changelog / Dokumentations-Changelog
 
+## 2026-09-21
+
+- Deutsch: Schritt 05 und Neustart in Schritt 09 präzisiert. App 0.2.10 und korrigiertes Pilotimage upgrade.2 einschließlich Prüfungen, Grenzen und zurückgenommener älterer Imagefreigaben dokumentiert.
+- English: clarified step 05 and step 09 restart. Documented app 0.2.10 and corrected pilot image upgrade.2, checks, limitations and revocation of earlier faulty pilot approvals.
+
 ## 2026-09-18
 
 - Deutsch: Zweisprachige Fehlerhilfe für NET-003 in Schritt 09; Firmennetz und Direktkabel eindeutig unterschieden. Bestätigte Startkorrektur und Grenzen der Geräteprüfung im Image-Changelog dokumentiert. Neue Image-/EXE-Ausgabe steht noch aus.

@@ -42,7 +42,7 @@ Keep the work folder and first choose **Resume write monitoring**. A UI error do
 3. On a **company LAN / switch**, enter the DLTNG's confirmed current IP address and click **Restore data**. DHCP may assign a different address after reinstallation.
 4. Use **Set up direct service connection** only when a dedicated Ethernet cable connects the DLTNG directly to this PC. This function is not intended for the shared company connection.
 
-If both display and network remain unavailable in the earlier pilot image, the newly identified startup configuration fault may be responsible. Diagnosis is required; NET-003 alone does not prove this cause. Keep the backup folder and contact support for a targeted startup correction. The fix has been tested on the 32-GB device but has not yet been released in a new complete image; see the [image changelog](image-changelog.md).
+If both display and network remain unavailable in the earlier pilot image, the newly identified startup configuration fault may be responsible. Diagnosis is required; NET-003 alone does not prove this cause. Keep the backup folder and contact support for a targeted startup correction. The fix has been tested on the 32-GB device and is included in new pilot image upgrade.2. Use app 0.2.10 and this image for new runs. A new EXE alone does not repair an already written old image; see the [image changelog](image-changelog.md).
 
 ## Interrupted restoration
 

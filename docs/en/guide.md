@@ -2,7 +2,7 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
-This guide covers **test build 0.2.9**, including explicit button guidance, the blinking warning, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+This guide covers **test build 0.2.10**, including explicit button guidance, the blinking warning, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
 
 ## Before you start
 
@@ -26,7 +26,7 @@ Start `DLTNG-Upgrade.exe`. Choose the work and backup folder if needed and use *
 
 ## 2 · Connect device
 
-Connect the PC and DLTNG to the same LAN. Enter the DLTNG IP address or select **“Find DLTNG on the network”**. **“Check device”** reads its identity, hardware and version.
+Connect the PC and DLTNG to the same LAN. Enter the DLTNG IP address or select **“Find DLTNG on the network”**. Remove cards and USB storage and let active operations finish. **“Check device”** reads its identity, hardware and version, then activates the upgrade screen with BUSY.
 
 Open **“Show direct cable connection options”** for additional settings. For a direct Ethernet cable, select the PC adapter used specifically for that connection. For a static device address, include the network prefix, for example `192.168.1.25/24`. For a DHCP device, limited assistance is available through **“Direct connection: find DLTNG without a static IP”**. Enable this only on a direct cable connection without a company network or switch.
 
@@ -42,7 +42,7 @@ Check the backup folder. The mandatory data backup is always enabled. The additi
 
 ## 5 · Back up data
 
-Remove cards and USB storage devices and wait for active operations to finish. **“Back up data”** pauses relevant writers, creates the backup and transfers it to the PC. Only a completely verified backup permits the next step.
+Cards and USB storage have already been removed and must remain out until completion. The device continues to show the upgrade screen and **BUSY**; do not wait for **“Ready”**. From 0.2.10, a completed download shows **“Image verified. Continue on the PC”**. Click **“Back up data”** at the bottom right. The wizard creates and transfers the backup, then advances automatically to step 06 only after full verification.
 
 Known configuration, data files, local databases, transfer records and device identity data are included. Unknown persistent data stops the workflow for review. For external database servers, connection settings are retained; their data is not restored to the device.
 
@@ -99,7 +99,14 @@ The warning is hidden for explicitly guided cable changes and restart after veri
 
 ## 9 · Restore data
 
-Disconnect the programming cable, release the boot button and start the DLTNG normally. Use the displayed target address or establish direct service access. **“Restore data”** reconnects to the same device, verifies the session proof and imports the backup.
+After writing and verification have completed, **restart** the DLTNG:
+
+1. Disconnect the power cable.
+2. Remove the USB programming cable completely and release the Admin button.
+3. Wait ten seconds, then reconnect power without pressing the Admin button. Keep Ethernet connected.
+4. Click **“Restore data”** at the bottom right. The wizard waits for the device, verifies the session proof and imports the backup.
+
+On the company LAN, use the current device address; from 0.2.10 the previously known LAN address is also tried. Set up direct service access only for a dedicated cable between PC and DLTNG. For a dark display or NET-003, see [troubleshooting](troubleshooting.md).
 
 ## 10 · Finish
 

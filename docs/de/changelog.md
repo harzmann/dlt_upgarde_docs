@@ -1,5 +1,13 @@
 # Programmänderungen
 
+## 0.2.10 – 2026-09-21 · Sicherung und Neustart
+
+- Schritt 05 setzt bereits entfernte Karten und USB-Datenträger voraus. Die Anzeige bleibt BUSY; auf „Bereit“ muss nicht gewartet werden.
+- Nach der Image-Prüfung zeigt das Gerät „Systemdatei geprüft. Am PC fortfahren“. Die Sicherungsvorbereitung erhält eine eigene Phase.
+- Schritt 09 erklärt den Neustart mit Stromtrennung, entferntem USB-Admin, freigegebenem Admin-Taster und zehn Sekunden Wartezeit.
+- Bekannte LAN-Adresse beim Wiederverbinden versuchen; Geräte-/Sitzungsnachweis vor dem Wechsel des Gerätehelfers prüfen. DHCP und feste Serviceadresse gemeinsam erhalten.
+- 141 Windows-Tests, Paket-Selbsttest und DE/EN-Darstellung bei 100/200 % bestanden. Für neue Flashvorgänge zusätzlich das korrigierte Image upgrade.2 verwenden. Eine neue EXE repariert kein bereits geschriebenes altes Image. Vollständige Migration bleibt in Abnahme.
+
 ## 0.2.9 – 2026-09-17 · Klare Klickanweisungen und Warnanzeige
 
 - Schritt 06 nennt nach dem Wiederanschließen des Stroms ausdrücklich „USB-Gerät erkennen“. Alle Schritte nennen die nächste Schaltfläche; laufende Aktionen zeigen passende Wartehinweise.

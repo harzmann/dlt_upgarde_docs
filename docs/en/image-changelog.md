@@ -1,5 +1,14 @@
 # DLTNG image changelog
 
+## 10.0.0-rc.4-upgrade.2-clean-update – 2026-09-21
+
+- New full pilot image retaining the local boot console. Company-LAN DHCP and the static service address coexist; networking starts before the maintenance display.
+- Updated device display after completed downloads and during backup preparation. Requires Upgrade app 0.2.10.
+- Filesystems, ARM64 applications, boot console, full decompression and checksums verified. Compressed size 992,888,644 bytes; raw size 4,647,288,832 bytes.
+- Compressed-file SHA256: f69b04015cba117882dc69bc4a4b7431d66163a36aa4abb9f3f7ce4d28db4716.
+- Signed UPS approval checked for the registered 32-GB pilot device, including download authorization and resumable byte ranges. The three earlier faulty pilot approvals were revoked.
+- Targeted boot/network correction is confirmed on the test device. First boot of this newly built image, complete migration and 16-GB acceptance remain pending. No general customer approval.
+
 ## Unreleased – 2026-09-18: Startup and reconnection
 
 - Identified and corrected a startup fault in the image recipe: a local boot console must remain available when the serial interface is disabled. Without it, the device can stop before the display and network start.
