@@ -7,7 +7,7 @@
 - Filesystems, ARM64 applications, boot console, full decompression and checksums verified. Compressed size 992,888,644 bytes; raw size 4,647,288,832 bytes.
 - Compressed-file SHA256: f69b04015cba117882dc69bc4a4b7431d66163a36aa4abb9f3f7ce4d28db4716.
 - Signed UPS approval checked for the registered 32-GB pilot device, including download authorization and resumable byte ranges. The three earlier faulty pilot approvals were revoked.
-- Targeted boot/network correction is confirmed on the test device. First boot of this newly built image, complete migration and 16-GB acceptance remain pending. No general customer approval.
+- The older-image run with targeted boot/network correction passed restoration, network application, final verification and release of normal operation. First boot of this newly built image, a complete new run and 16-GB acceptance remain pending. No general customer approval.
 
 ## Unreleased – 2026-09-18: Startup and reconnection
 
