@@ -2,7 +2,7 @@
 
 Diese Anleitung beschreibt den vorgesehenen Ablauf. In der aktuellen Entwicklungsausgabe lässt er sich vollständig im **Demomodus** ausprobieren. Ein echter Flashvorgang setzt ein ausdrücklich freigegebenes Gerät und ein passendes signiertes Image voraus.
 
-Diese Anleitung berücksichtigt die **Testausgabe 0.2.10**, einschließlich eindeutiger Klickanweisungen, blinkender Warnanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
+Diese Anleitung berücksichtigt die **Testausgabe 0.2.11**, einschließlich eindeutiger Klickanweisungen, blinkender Warnanzeige, Anschlussbilder und Explorer-Unterdrückung. Der öffentliche Standarddownload bleibt 0.2.0; die Testausgabe wird für das freigegebene Laborgerät bereitgestellt.
 
 ## Vor dem Start
 
@@ -21,6 +21,8 @@ Oben rechts auf die **Landesflagge mit Sprachname** klicken und **Deutsch** oder
 *Abbildung: Demomodus der Testausgabe 0.2.6.*
 
 ## 1 · Vorbereiten
+
+Schritt 01 und 05 zeigen den vollständigen **Arbeits- und Sicherungsordner dieses Vorgangs**, einschließlich des Unterordners mit `session.json`. Der Pfad wird nach Ordnerwechsel und Wiederaufnahme aktualisiert.
 
 `DLTNG-Upgrade.exe` starten. Bei Bedarf den Arbeits- und Sicherungsordner wählen und **„USB-Treiber einrichten“** verwenden. **„Vorbereitung prüfen“** kontrolliert die PC-Voraussetzungen. Zum gefahrlosen Kennenlernen **„Demo ausprobieren“** wählen.
 
@@ -106,7 +108,7 @@ Nach dem vollständig geprüften Schreiben das DLTNG **neu starten**:
 3. Zehn Sekunden warten, dann Strom wieder anschließen, ohne den Admin-Taster zu drücken. Das Netzwerkkabel bleibt angeschlossen.
 4. Unten rechts **„Daten wiederherstellen“** klicken. Der Assistent wartet auf das Gerät, prüft den Sitzungsnachweis und importiert die Sicherung.
 
-Im Firmennetz die aktuelle Geräteadresse verwenden; ab 0.2.10 wird auch die zuvor bekannte LAN-Adresse versucht. Den direkten Servicezugang nur für ein eigenes Kabel zwischen PC und DLTNG einrichten. Bei dunklem Display oder NET-003 die [Fehlerhilfe](troubleshooting.md) beachten.
+Ab 0.2.11 bleibt das IP-Feld zunächst leer. **Erst nach Entfernen des USB-Admin-Kabels, Neustart und Klick auf „Daten wiederherstellen“ beginnt die Suche.** Die App prüft bekannte Adressen und das zugehörige lokale Netz automatisch; sie zeigt den Suchfortschritt und anschließend die zuletzt mit Sitzungsnachweis erreichte Adresse an. Eine bekannte IP kann optional eingetragen werden. Die Serviceadresse `172.31.254.2` ist keine ermittelte LAN-Adresse. Direkte Ethernet-Optionen nur für ein eigenes Kabel zwischen PC und DLTNG aufklappen. Grenzen der Suche und USB-Admin: [Fehlerhilfe](troubleshooting.md).
 
 ## 10 · Abschluss
 

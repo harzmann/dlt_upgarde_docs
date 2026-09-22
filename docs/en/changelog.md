@@ -1,5 +1,13 @@
 # Application changelog
 
+## 0.2.11 – 2026-09-22 · Backup folder and automatic reconnection
+
+- Show the actual work/backup folder in steps 01, 04 and 05, including after relocation and resume.
+- Step 09 waits for USB-Admin removal, the guided restart and the “Restore data” click before searching. No preset service address is presented as a LAN address.
+- Check the previous address, local neighbors and a bounded part of the relevant LAN. Handle DHCP changes and unrelated devices at the old IP; verify serial, session proof and target role before transfers.
+- Display search progress and the last verified address; expand direct Ethernet options on demand. Record connection attempts in the diagnostic timeline.
+- Image upgrade.2 remains unchanged. USB networking through Admin is documented as a future extension and is not integrated yet. Real DHCP changes during a complete hardware migration remain to be tested.
+
 ## 0.2.10 – 2026-09-21 · Backup and restart
 
 - Step 05 assumes cards and USB storage have already been removed. BUSY remains active; do not wait for “Ready”.

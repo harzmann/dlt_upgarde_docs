@@ -1,5 +1,10 @@
 # Documentation changelog / Dokumentations-Changelog
 
+## 2026-09-22
+
+- Deutsch: Testausgabe 0.2.11 mit sichtbarem Sicherungsordner, automatischer Wiederverbindung erst nach Neustart und Klick, Suchgrenzen und geplantem USB-Netzwerk beschrieben. Image upgrade.2 unverändert.
+- English: documented test build 0.2.11 with visible backup folder, automatic reconnection only after restart and click, discovery limits and future USB networking. Image upgrade.2 unchanged.
+
 ## 2026-09-21
 
 - Deutsch: Schritt 05 und Neustart in Schritt 09 präzisiert. App 0.2.10 und korrigiertes Pilotimage upgrade.2 einschließlich Prüfungen, Grenzen und zurückgenommener älterer Imagefreigaben dokumentiert.

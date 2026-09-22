@@ -2,7 +2,7 @@
 
 This guide describes the intended workflow. You can try every step in **demo mode** in the current development edition. Actual flashing requires an explicitly approved device and a matching signed image.
 
-This guide covers **test build 0.2.10**, including explicit button guidance, the blinking warning, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
+This guide covers **test build 0.2.11**, including explicit button guidance, the blinking warning, connector illustrations and Explorer suppression. The public standard download remains 0.2.0; the test build is supplied for the approved lab device.
 
 ## Before you start
 
@@ -21,6 +21,8 @@ Click the **country flag and language name** at the top right and select **Deuts
 *Screenshot: test build 0.2.4 in demo mode.*
 
 ## 1 · Prepare
+
+Steps 01 and 05 display the full **work and backup folder for this session**, including the subfolder containing `session.json`. Relocation and resume refresh the path.
 
 Start `DLTNG-Upgrade.exe`. Choose the work and backup folder if needed and use **“Set up USB driver”** when required. **“Check preparation”** checks the PC prerequisites. Select **“Try the demo”** to explore the workflow without changing a device.
 
@@ -106,7 +108,7 @@ After writing and verification have completed, **restart** the DLTNG:
 3. Wait ten seconds, then reconnect power without pressing the Admin button. Keep Ethernet connected.
 4. Click **“Restore data”** at the bottom right. The wizard waits for the device, verifies the session proof and imports the backup.
 
-On the company LAN, use the current device address; from 0.2.10 the previously known LAN address is also tried. Set up direct service access only for a dedicated cable between PC and DLTNG. For a dark display or NET-003, see [troubleshooting](troubleshooting.md).
+From 0.2.11, the IP field starts empty. **Searching begins only after removing USB-Admin, restarting and clicking “Restore data”.** The app checks known addresses and the relevant local network automatically, displaying search progress and the last address verified by session proof. A known IP may optionally be entered. Service address `172.31.254.2` is not a discovered LAN address. Expand direct Ethernet options only for a dedicated cable between PC and DLTNG. For discovery limits and USB-Admin, see [troubleshooting](troubleshooting.md).
 
 ## 10 · Finish
 

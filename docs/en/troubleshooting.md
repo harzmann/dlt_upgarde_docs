@@ -39,7 +39,7 @@ Keep the work folder and first choose **Resume write monitoring**. A UI error do
 
 1. Keep the existing session and backup folder. A missing network connection alone does not require writing the system again.
 2. Remove USB Admin, release the Admin button and start the device normally as described in the guide.
-3. On a **company LAN / switch**, enter the DLTNG's confirmed current IP address and click **Restore data**. DHCP may assign a different address after reinstallation.
+3. On the **company LAN / switch**, leave the IP field empty and click **Restore data** after restarting. From 0.2.11, known addresses and the relevant local LAN are checked automatically, including DHCP address changes. Alternatively enter a known current IP. No search runs before that click.
 4. Use **Set up direct service connection** only when a dedicated Ethernet cable connects the DLTNG directly to this PC. This function is not intended for the shared company connection.
 
 If both display and network remain unavailable in the earlier pilot image, the newly identified startup configuration fault may be responsible. Diagnosis is required; NET-003 alone does not prove this cause. Keep the backup folder and contact support for a targeted startup correction. The fix has been tested on the 32-GB device and is included in new pilot image upgrade.2. Use app 0.2.10 and this image for new runs. A new EXE alone does not repair an already written old image; see the [image changelog](image-changelog.md).
@@ -73,3 +73,9 @@ UPS returns a checksum receipt. Logged-in administrators find packages under **S
 | `SES-007` | Write record belongs to another session. Choose the correct session; contact support. |
 | `DIA-001` | Package exceeds 20 MiB. Keep it locally and contact support. |
 | `DIA-002` | UPS rejected the upload. Keep the local ZIP; check connection and authorisation. |
+
+## Discovery limits and USB-Admin
+
+Automatic discovery considers active physical PC networks matching the known device address or explicitly selected direct adapter. It scans at most one /24 slice per network and up to 64 known local neighbors. On larger networks the slice contains the previous device address. At most two networks and 576 addresses per round are checked; discovery lasts approximately six minutes with individual timeouts. Other VLANs, VPNs or a changed PC connection require the current IP or a direct Ethernet service cable. Diagnostics record attempts and device/session proof.
+
+USB-Admin currently serves flashing. Networking through it requires a separate USB gadget mode in the image, matching OTG wiring and a Windows RNDIS driver; this is not integrated yet. Planned work includes isolated service access without routing/Internet sharing and hardware tests for restart and cable changes. Until then, remove USB-Admin for the guided restart. [Raspberry Pi USB gadget](https://github.com/raspberrypi/rpi-usb-gadget).

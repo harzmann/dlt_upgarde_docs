@@ -39,7 +39,7 @@ Arbeitsordner behalten und zuerst **Schreibstatus wieder aufnehmen**. Eine Fehle
 
 1. Den bisherigen Vorgang und den Sicherungsordner behalten. Eine fehlende Netzwerkverbindung allein erfordert kein erneutes Schreiben des Systems.
 2. USB-Admin entfernen, Admin-Taster freigeben und das Gerät entsprechend der Anleitung normal starten.
-3. Im **Firmennetz / am Switch** die aktuelle, bestätigte IP-Adresse des DLTNG im Adressfeld eingeben und **Daten wiederherstellen** drücken. Nach dem Neuinstallieren kann DHCP eine andere Adresse vergeben.
+3. Im **Firmennetz / am Switch** das IP-Feld leer lassen und nach dem Neustart **Daten wiederherstellen** drücken. Ab 0.2.11 werden bekannte Adressen und das zugehörige lokale Netz automatisch geprüft, auch bei geänderter DHCP-Adresse. Alternativ eine bekannte aktuelle IP eingeben. Vor dem Klick erfolgt keine Suche.
 4. **Direkte Serviceverbindung einrichten** nur verwenden, wenn das DLTNG mit einem eigenen Netzwerkkabel direkt an diesem PC angeschlossen ist. Diese Funktion ist nicht für den gemeinsamen Firmenanschluss vorgesehen.
 
 Bleiben Display und Netzwerk im bisherigen Pilotimage vollständig aus, kann der inzwischen erkannte Startkonfigurationsfehler vorliegen. Das muss über die Diagnose geprüft werden; NET-003 allein beweist diese Ursache nicht. Den Sicherungsordner behalten und den Support zur gezielten Startkorrektur hinzuziehen. Der Fix ist am 32-GB-Testgerät geprüft und im neuen Pilotimage upgrade.2 enthalten. Für neue Durchläufe App 0.2.10 und dieses Image verwenden. Eine neue EXE allein repariert kein bereits geschriebenes altes Image; siehe [Image-Changelog](image-changelog.md).
@@ -73,3 +73,9 @@ UPS bestätigt den Empfang mit einer Prüfsummenquittung. Pakete sind für angem
 | `SES-007` | Schreibnachweis gehört nicht zur Sitzung. Richtige Sitzung wählen; Support einschalten. |
 | `DIA-001` | Diagnosepaket über 20 MiB. Lokal behalten und Support kontaktieren. |
 | `DIA-002` | UPS hat den Upload nicht angenommen. Lokales ZIP behalten, Verbindung und Freigabe prüfen. |
+
+## Grenzen der Suche und USB-Admin
+
+Die automatische Suche berücksichtigt aktive physische PC-Netze, die zur bekannten Geräteadresse oder dem ausdrücklich ausgewählten Direktadapter passen. Pro Netz wird höchstens ein /24-Ausschnitt durchsucht; zusätzlich werden bis zu 64 bekannte lokale Nachbarn geprüft. Bei größeren Netzen liegt der Ausschnitt um die frühere Geräteadresse. Maximal zwei Netze, insgesamt 576 Adressen pro Runde; Suchdauer etwa sechs Minuten mit einzelnen Zeitlimits. Für andere VLANs, VPN oder einen gewechselten PC-Anschluss die aktuelle IP angeben oder das direkte Ethernet-Servicekabel verwenden. Diagnose protokolliert Versuche und den Geräte-/Sitzungsnachweis.
+
+USB-Admin dient derzeit dem Flashen. Netzwerkzugang darüber erfordert einen eigenen USB-Gadget-Modus im Image, die passende OTG-Verdrahtung und einen Windows-RNDIS-Treiber; dies ist noch nicht integriert. Geplant sind ein isolierter Servicezugang ohne Routing/Internetfreigabe und Hardwaretests für Neustart und Kabelwechsel. Bis dahin USB-Admin beim angeleiteten Neustart entfernen. [Raspberry Pi USB gadget](https://github.com/raspberrypi/rpi-usb-gadget).

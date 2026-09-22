@@ -4,18 +4,20 @@ A separately configured test build, version 0.2.1 or later, can retrieve a signe
 
 ## Fixes for the current test
 
-**Use test build 0.2.10.** From the device check onwards, DLTNG displays the upgrade stage and **BUSY**. Smartcard, USB, RFID and uploads remain inhibited until verified release. The fixes from 0.2.6 remain included: resumable Windows helpers, **Back** to review completed steps, compact layout and **Diagnostics** with error-code explanations, a redacted ZIP and confirmed upload to UPS.
+**Use test build 0.2.11.** From the device check onwards, DLTNG displays the upgrade stage and **BUSY**. Smartcard, USB, RFID and uploads remain inhibited until verified release. The fixes from 0.2.6 remain included: resumable Windows helpers, **Back** to review completed steps, compact layout and **Diagnostics** with error-code explanations, a redacted ZIP and confirmed upload to UPS.
 
-**Resume an existing session:** Keep the device connected while a helper is working. After it finishes, close the old EXE, start 0.2.10 and choose **“Open session”** with the current `session.json`. If multiple sessions exist, choose using their date, progress and folder; newest is listed first. Verified downloads and backups are retained. A successful saved write result leads directly to data restoration. If the original device resumed normal operation after backup, a fresh backup is required.
+**Resume an existing session:** Keep the device connected while a helper is working. After it finishes, close the old EXE, start 0.2.11 and choose **“Open session”** with the current `session.json`. If multiple sessions exist, choose using their date, progress and folder; newest is listed first. Verified downloads and backups are retained. A successful saved write result leads directly to data restoration. If the original device resumed normal operation after backup, a fresh backup is required.
 
-**Start over after reinstalling the original 1.0 image:** Boot DLTNG normally and wait until it is ready. Launch test build 0.2.10 and create a new session with a fresh backup; do not open an old `session.json`. Select a new persistent working folder and retain previous backup folders. Remove cards and USB storage before **“Check device”**. The app downloads the matching signed pilot image from UPS; the normal procedure does not require manual image selection.
+**Start over after reinstalling the original 1.0 image:** Boot DLTNG normally and wait until it is ready. Launch test build 0.2.11 and create a new session with a fresh backup; do not open an old `session.json`. Select a new persistent working folder and retain previous backup folders. Remove cards and USB storage before **“Check device”**. The app downloads the matching signed pilot image from UPS; the normal procedure does not require manual image selection.
 
-New flashing requires **10.0.0-rc.4-upgrade.2-clean-update** and test build **0.2.10**. It retains the required boot console and DHCP alongside the service address. Do not reuse faulty earlier pilot images. A new EXE alone does not repair an already written old image; for a dark display, contact support for a targeted startup correction and retain the session. After that correction, the existing backup can be restored. Complete migration and 16-GB acceptance remain pending.
+New flashing requires **10.0.0-rc.4-upgrade.2-clean-update** and test build **0.2.11**. It retains the required boot console and DHCP alongside the service address. Do not reuse faulty earlier pilot images. A new EXE alone does not repair an already written old image; for a dark display, contact support for a targeted startup correction and retain the session. After that correction, the existing backup can be restored. Complete migration and 16-GB acceptance remain pending.
 
 On an existing LAN, use the normal device connection. The direct service connection is intended for a dedicated Ethernet cable between the PC and DLTNG. The app requests administrator rights for the relevant Windows operation.
 
+From 0.2.11, steps 01 and 05 show the current backup folder. In step 09, remove USB-Admin and restart as instructed, then click **Restore data**. Only that click starts automatic discovery. The IP field may remain empty; discovered addresses require device/session proof before transfers. [Discovery limits and USB networking](troubleshooting.md#discovery-limits-and-usb-admin).
 
-In 0.2.10 every step names the next button. After reconnecting power in step 06, click **“Detect USB device”** at the bottom right. During operations, the PC wizard shows a blinking red **“UPGRADE IN PROGRESS - DO NOT POWER OFF!”** warning. It also remains active for uncertain write status; it is hidden for guided cable changes and restart.
+
+In 0.2.11 every step names the next button. After reconnecting power in step 06, click **“Detect USB device”** at the bottom right. During operations, the PC wizard shows a blinking red **“UPGRADE IN PROGRESS - DO NOT POWER OFF!”** warning. It also remains active for uncertain write status; it is hidden for guided cable changes and restart.
 
 ## Device administrator preparation
 

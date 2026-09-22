@@ -1,5 +1,13 @@
 # Programmänderungen
 
+## 0.2.11 – 2026-09-22 · Sicherungsordner und automatische Wiederverbindung
+
+- Den tatsächlichen Arbeits- und Sicherungsordner in Schritt 01, 04 und 05 anzeigen, auch nach Ordnerwechsel und Wiederaufnahme.
+- Schritt 09 wartet auf USB-Admin-Entfernung, den angeleiteten Neustart und den Klick auf „Daten wiederherstellen“. Erst dann beginnt die automatische Suche; keine vorbelegte Serviceadresse als vermeintliche LAN-Adresse.
+- Frühere Adresse, lokale Nachbarn und begrenzten Bereich des zugehörigen LANs prüfen. DHCP-Adresswechsel und fremde Geräte an der alten IP behandeln; vor jeder Übertragung Seriennummer, Sitzungsnachweis und Zielrolle prüfen.
+- Suchfortschritt und zuletzt nachgewiesene Adresse anzeigen; direkte Ethernet-Optionen aufklappbar. Verbindungsversuche im Diagnoseverlauf protokollieren.
+- Image upgrade.2 bleibt unverändert. USB-Netzwerk über Admin ist als Erweiterung beschrieben und noch nicht integriert. Echte DHCP-Wechsel während einer vollständigen Gerätemigration bleiben praktisch zu prüfen.
+
 ## 0.2.10 – 2026-09-21 · Sicherung und Neustart
 
 - Schritt 05 setzt bereits entfernte Karten und USB-Datenträger voraus. Die Anzeige bleibt BUSY; auf „Bereit“ muss nicht gewartet werden.
