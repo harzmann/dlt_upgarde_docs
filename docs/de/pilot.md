@@ -4,7 +4,7 @@ Eine gesonderte Testausgabe ab Version 0.2.1 kann ein signiertes Laborimage übe
 
 ## Korrekturen für den aktuellen Test
 
-**Testausgabe 0.2.12 verwenden.** Sie zeigt ab der Geräteprüfung den Upgrade-Schritt und **BUSY** auf dem DLTNG an. Smartcard, USB, RFID und Übertragung bleiben bis zur geprüften Freigabe gesperrt. Die Korrekturen aus 0.2.6 bleiben enthalten: wiederaufnehmbare Windows-Systemhelfer, **Zurück** zum Betrachten erledigter Schritte, kompakte Ansicht und **Diagnose** mit Fehlercode-Erklärung, bereinigtem ZIP und bestätigtem Versand an UPS.
+**[Testausgabe 0.2.12](https://github.com/harzmann/dlt_upgrade/releases/tag/v0.2.12-pilot.1) verwenden.** Sie zeigt ab der Geräteprüfung den Upgrade-Schritt und **BUSY** auf dem DLTNG an. Smartcard, USB, RFID und Übertragung bleiben bis zur geprüften Freigabe gesperrt. Die Korrekturen aus 0.2.6 bleiben enthalten: wiederaufnehmbare Windows-Systemhelfer, **Zurück** zum Betrachten erledigter Schritte, kompakte Ansicht und **Diagnose** mit Fehlercode-Erklärung, bereinigtem ZIP und bestätigtem Versand an UPS.
 
 **Bestehenden Vorgang fortsetzen:** Lassen Sie das Gerät angeschlossen, solange ein Systemhelfer arbeitet. Nach dessen Abschluss die alte EXE schließen, 0.2.12 starten und **„Vorgang öffnen“** wählen. Die aktuelle `session.json` verwenden. Bei mehreren Vorgängen helfen Datum, Fortschritt und Ordner bei der Auswahl; der neueste steht oben. Bereits geprüfter Download und Sicherung bleiben erhalten. Ein erfolgreicher Schreibnachweis führt direkt zur Datenwiederherstellung. Falls das Altgerät nach der Sicherung wieder normal betrieben wurde, ist dagegen eine neue Sicherung erforderlich.
 
@@ -18,6 +18,14 @@ Ab 0.2.11 zeigen Schritt 01 und 05 den aktuellen Sicherungsordner. In Schritt 09
 
 
 In 0.2.11 nennt jeder Schritt die nächste Schaltfläche. Nach dem Wiederanschließen des Stroms in Schritt 06 unten rechts auf **„USB-Gerät erkennen“** klicken. Während laufender Arbeiten blinkt oben im PC-Assistenten die rote Warnung **„UPGRADE-VORGANG LÄUFT - NICHT AUSSCHALTEN!“**. Sie bleibt auch bei unklarem Schreibstatus aktiv; in den angeleiteten Pausen zum Umstecken und Neustarten wird sie ausgeblendet.
+
+## Ausgangsversion 9.6
+
+Ab **0.2.12** unterstützt der Pilot auch das geprüfte 9.6-Anwendungspaket Revision 3. Die automatische Suche zeigt identifizierbare DLTNGs auch dann an, wenn ihre Version noch kein freigegebenes Sicherungsprofil besitzt; erst „Gerät prüfen“ entscheidet über die Zulässigkeit.
+
+Nach Neuinstallation oder Wechsel von 1.0 auf 9.6 einen **neuen Vorgang mit neuer Sicherung** beginnen. Keine frühere Sitzung einer anderen Installation übernehmen; bisherige Sicherungsordner behalten. Die zusätzliche UPS-Freigabe gilt für das registrierte 32-GB-Testgerät, exakt 9.6 und App ab 0.2.12. Das Image upgrade.2 bleibt bytegleich.
+
+Lesende Geräteprüfung, automatische Suche und Sicherungsvorprüfung sind erfolgreich. Isolierte Wiederherstellung einschließlich Datenbankzeilen, Konfiguration, Dateiprüfsummen und wiederholtem Import bestanden; der vollständige physische 9.6-Upgradeversuch bleibt offen. Alte NFC-Konfigurationen werden archiviert. Bei vorhandenen Upload-Dateien ohne Versandnachweise ist Offline-Modus erforderlich. Die 9.6-USB-Wartezeit wird als Einstellung erhalten; das Zielsystem 10.x verwendet eine andere USB-Einbindelogik, die diese feste Wartezeit derzeit nicht auswertet.
 
 ## Vorbereitung durch den Gerätebetreuer
 
@@ -41,12 +49,3 @@ Für diesen Pilottest ist kein Zwischenupdate auf 9.5 erforderlich. Die aktuelle
 Die bereitgestellte Test-EXE verwenden; oben erscheint **„LABOR“**. Die vollständige Gerätesicherung aktiviert lassen und die [Schrittanleitung](guide.md) befolgen. Der Gerätebetreuer muss die Boot-Taster- und Kabelfolge an der tatsächlichen Trägerplatine bestätigen. Seriennummer, Ausgangs-/Zielversion, Sicherung, Ergebnis und Rückfall-Boot dokumentieren.
 
 Eine erfolgreiche Pilotmigration ist noch keine allgemeine Freigabe für andere Geräte oder Ausgangsversionen.
-
-## Ausgangsversion 9.6
-
-Ab **0.2.12** unterstützt der Pilot auch das geprüfte 9.6-Anwendungspaket Revision 3. Die automatische Suche zeigt identifizierbare DLTNGs auch dann an, wenn ihre Version noch kein freigegebenes Sicherungsprofil besitzt; erst „Gerät prüfen“ entscheidet über die Zulässigkeit.
-
-Nach Neuinstallation oder Wechsel von 1.0 auf 9.6 einen **neuen Vorgang mit neuer Sicherung** beginnen. Keine frühere Sitzung einer anderen Installation übernehmen; bisherige Sicherungsordner behalten. Die zusätzliche UPS-Freigabe gilt für das registrierte 32-GB-Testgerät, exakt 9.6 und App ab 0.2.12. Das Image upgrade.2 bleibt bytegleich.
-
-Lesende Geräteprüfung, automatische Suche und Sicherungsvorprüfung sind erfolgreich. Isolierte Wiederherstellung einschließlich Datenbankzeilen, Konfiguration, Dateiprüfsummen und wiederholtem Import bestanden; der vollständige physische 9.6-Upgradeversuch bleibt offen. Alte NFC-Konfigurationen werden archiviert. Bei vorhandenen Upload-Dateien ohne Versandnachweise ist Offline-Modus erforderlich. Die 9.6-USB-Wartezeit wird als Einstellung erhalten; das Zielsystem 10.x verwendet eine andere USB-Einbindelogik, die diese feste Wartezeit derzeit nicht auswertet.
-

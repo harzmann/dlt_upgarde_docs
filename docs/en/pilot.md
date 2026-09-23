@@ -4,7 +4,7 @@ A separately configured test build, version 0.2.1 or later, can retrieve a signe
 
 ## Fixes for the current test
 
-**Use test build 0.2.12.** From the device check onwards, DLTNG displays the upgrade stage and **BUSY**. Smartcard, USB, RFID and uploads remain inhibited until verified release. The fixes from 0.2.6 remain included: resumable Windows helpers, **Back** to review completed steps, compact layout and **Diagnostics** with error-code explanations, a redacted ZIP and confirmed upload to UPS.
+**Use [test build 0.2.12](https://github.com/harzmann/dlt_upgrade/releases/tag/v0.2.12-pilot.1).** From the device check onwards, DLTNG displays the upgrade stage and **BUSY**. Smartcard, USB, RFID and uploads remain inhibited until verified release. The fixes from 0.2.6 remain included: resumable Windows helpers, **Back** to review completed steps, compact layout and **Diagnostics** with error-code explanations, a redacted ZIP and confirmed upload to UPS.
 
 **Resume an existing session:** Keep the device connected while a helper is working. After it finishes, close the old EXE, start 0.2.12 and choose **“Open session”** with the current `session.json`. If multiple sessions exist, choose using their date, progress and folder; newest is listed first. Verified downloads and backups are retained. A successful saved write result leads directly to data restoration. If the original device resumed normal operation after backup, a fresh backup is required.
 
