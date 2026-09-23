@@ -1,5 +1,12 @@
 # Programmänderungen
 
+## 0.2.12 – 2026-09-23 · Ausgangsversion 9.6
+
+- Das geprüfte 9.6-Profil erkennen: originale Datenbankstruktur kontrollieren, alte NFC-Konfiguration archivieren und vorhandene Nutzdaten vollständig erfassen. Ungeprüfte 9.6-Unterversionen bleiben gesperrt.
+- Identifizierbare DLTNGs in der Suche anzeigen, auch wenn für ihre Version noch kein Upgrade freigegeben ist. Die ausdrückliche Geräteprüfung behält die Versionssperre.
+- Zusätzliche signierte, gerätegebundene UPS-Pilotfreigabe für 9.6 ab App 0.2.12; Image upgrade.2 bytegleich. Bisherige Freigaben bleiben erhalten.
+- Quelle 9.6 am Testgerät ausschließlich lesend geprüft; automatische Suche und Sicherungsvorprüfung erfolgreich. Isolierte Datenbank-/Dateiwiederherstellung samt erneutem Import bestanden. Vollständiger physischer 9.6-Upgradeversuch bleibt offen. [Prüfgrundlage und Grenzen](pilot.md).
+
 ## 0.2.11 – 2026-09-22 · Sicherungsordner und automatische Wiederverbindung
 
 - Den tatsächlichen Arbeits- und Sicherungsordner in Schritt 01, 04 und 05 anzeigen, auch nach Ordnerwechsel und Wiederaufnahme.

@@ -1,5 +1,11 @@
 # Hilfe bei Problemen
 
+## SRC-001 unter DLTNG 9.6 / Gerät fehlt in der Suche
+
+Die Testausgabe bis 0.2.11 kennt das Sicherungsprofil für 9.6 noch nicht und blendet solche Geräte auch in der Suche aus. Für das geprüfte 9.6-Paket Revision 3 die separate **Testausgabe 0.2.12** verwenden. Die passende signierte UPS-Freigabe ist zusätzlich erforderlich und für das registrierte 32-GB-Testgerät eingerichtet. Der öffentliche Standarddownload 0.2.0 enthält diese Korrektur nicht.
+
+Nach einem Wechsel der installierten Version einen neuen Vorgang mit frischer Sicherung starten. Geräte mit anderen ungeprüften Versionen bleiben beim Prüfen gesperrt, werden aber künftig in der Suche angezeigt. Bei großen/getrennten Netzen kann weiterhin eine manuelle IP nötig sein; die Suche ist auf bekannte lokale Nachbarn und Gerätenamen begrenzt.
+
 Die Fehlermeldung nennt das Problem und einen nächsten Schritt. Sicherungen und Sitzungszustand bleiben erhalten. Den angezeigten **Fehlercode** zusammen mit dem Sitzungsordner für den Support bereithalten.
 
 | Situation | Nächster Schritt |

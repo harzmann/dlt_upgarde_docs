@@ -1,5 +1,9 @@
 # DLTNG-Image: Changelog
 
+## Zusätzliche 9.6-Pilotfreigabe – 2026-09-23
+
+App **0.2.12** unterstützt das geprüfte Quellprofil 9.6. Die neue signierte, gerätegebundene UPS-Freigabe benötigt mindestens diese App-Version. Das Image **10.0.0-rc.4-upgrade.2-clean-update bleibt bytegleich**; bisherige Freigaben bleiben erhalten. Die App stellt den neuen Sicherungs-/Migrationshelfer nach Geräte-/Sitzungsprüfung bereit. NFC-Konfiguration, ursprüngliches Datenbankschema und Übertragungsnachweise werden berücksichtigt. Geräteprüfung und isolierte Wiederherstellung sind bestanden; vollständige physische 9.6-Migration bleibt offen. Es wurde kein neues Image gebaut.
+
 ## 10.0.0-rc.4-upgrade.2-clean-update – 2026-09-21
 
 - Neues vollständiges Pilotimage mit erhaltener lokaler Startkonsole. DHCP im Firmennetz und feste Serviceadresse werden gemeinsam eingerichtet; der Netzwerkstart erfolgt vor der Wartungsanzeige.

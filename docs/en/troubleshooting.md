@@ -1,5 +1,11 @@
 # Troubleshooting
 
+## SRC-001 on DLTNG 9.6 / Device missing from discovery
+
+Test builds through 0.2.11 lack the backup profile for 9.6 and also hide these devices during discovery. Use separate **test build 0.2.12** for assessed 9.6 package revision 3. A matching signed UPS approval is also required and has been configured for the registered 32-GB test device. Public standard download 0.2.0 does not include this fix.
+
+After changing the installed version, start a new session with a fresh backup. Other unassessed source versions still fail the explicit device check but are now visible in discovery. Larger/separate networks may still require a manual IP; discovery is limited to known local neighbors and device names.
+
 Error messages describe the problem and the next action. Backups and session state are retained. Keep the displayed **error code** and session folder available for support.
 
 | Situation | Next action |

@@ -1,5 +1,9 @@
 # DLTNG image changelog
 
+## Additional 9.6 pilot approval – 2026-09-23
+
+App **0.2.12** supports the assessed source-9.6 profile. A new signed device-scoped UPS approval requires this app version or later. **Image 10.0.0-rc.4-upgrade.2-clean-update bytes are unchanged** and previous approvals remain intact. The app provisions the new backup/migration helper after device/session checks, covering NFC configuration, the original database schema and transfer receipts. Read-only device inspection and isolated restoration passed; full physical 9.6 migration remains pending. No new image was built.
+
 ## 10.0.0-rc.4-upgrade.2-clean-update – 2026-09-21
 
 - New full pilot image retaining the local boot console. Company-LAN DHCP and the static service address coexist; networking starts before the maintenance display.

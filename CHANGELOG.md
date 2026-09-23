@@ -1,5 +1,10 @@
 # Documentation changelog / Dokumentations-Changelog
 
+## 2026-09-23
+
+- Deutsch: Testausgabe 0.2.12, geprüftes Quellprofil 9.6, sichtbare Geräte trotz Versionssperre, zusätzliche UPS-Freigabe sowie Testgrenzen und neuer Vorgang nach Versionswechsel dokumentiert.
+- English: documented test build 0.2.12, assessed source-9.6 profile, discovery despite version restrictions, additional UPS approval, test limits and a new session after changing source versions.
+
 ## 2026-09-22
 
 - Deutsch: Testausgabe 0.2.11 mit sichtbarem Sicherungsordner, automatischer Wiederverbindung erst nach Neustart und Klick, Suchgrenzen und geplantem USB-Netzwerk beschrieben. Image upgrade.2 unverändert.

@@ -1,5 +1,12 @@
 # Application changelog
 
+## 0.2.12 – 2026-09-23 · Source version 9.6
+
+- Recognize the assessed 9.6 profile: verify the original database schema, archive legacy NFC configuration and inventory user data. Unassessed 9.6 subversions remain blocked.
+- Show identifiable DLTNGs in discovery even when their version has no approved upgrade yet. Explicit device checks retain the source-version gate.
+- Additional signed device-scoped UPS approval for 9.6 requires app 0.2.12; image upgrade.2 bytes and previous approvals are unchanged.
+- Read-only inspection, discovery and backup preflight passed on the 9.6 test device. Isolated database/file restoration and repeated import passed. Full physical migration from 9.6 remains pending. [Assessment and limitations](pilot.md).
+
 ## 0.2.11 – 2026-09-22 · Backup folder and automatic reconnection
 
 - Show the actual work/backup folder in steps 01, 04 and 05, including after relocation and resume.
